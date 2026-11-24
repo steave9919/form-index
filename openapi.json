@@ -3,9 +3,9 @@
   "info": {
     "title": "FORM INDEX Data API",
     "version": "0.1.0",
-    "description": "Draft read-only API for structured adult product review data. Editorial scores are estimates based on published retailer specifications and verified-buyer feedback."
+    "description": "Draft read-only API for structured companion product review data. Editorial scores are estimates based on published retailer specifications and verified-buyer feedback."
   },
-  "servers": [{ "url": "https://steave9919.github.io/form-index" }],
+  "servers": [{ "url": "https://lllaf.com" }],
   "paths": {
     "/products": {
       "get": {
