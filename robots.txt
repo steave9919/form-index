@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://steave9919.github.io/form-index/sitemap.xml

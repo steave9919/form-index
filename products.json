@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "project": "FORM INDEX",
+    "version": "0.3-live",
+    "updated_at": "2026-11-24",
+    "notice": "Editorial scores are FORM INDEX estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests. Retailer links may earn a commission."
+  },
+  "products": [
+    {
+      "id": "quzio-aline-157",
+      "category": "doll",
+      "brand": "Quzio",
+      "name": "Aline 157cm",
+      "price_usd": 499.99,
+      "editor_score": 8.7,
+      "store_rating": 5.0,
+      "review_count": 24,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "store_url": "https://quziostore.com/products/aline-157-cm-lifelike-sex-doll-tpe-metal-skeleton-jelly-breast-3d-realistic-structure-love-doll",
+      "updated_at": "2026-11-23"
+    },
+    {
+      "id": "quzio-elara-158",
+      "category": "doll",
+      "brand": "Quzio",
+      "name": "Elara 158cm",
+      "price_usd": 553.60,
+      "editor_score": 8.5,
+      "store_rating": 5.0,
+      "review_count": 24,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "store_url": "https://quziostore.com/products/elara-625-in-red-haired-blue-eyed-realistic-sex-doll-companion",
+      "updated_at": "2026-11-23"
+    },
+    {
+      "id": "quzio-liana-torso",
+      "category": "molded",
+      "brand": "Quzio",
+      "name": "Liana 1:1 Torso",
+      "price_usd": 499.89,
+      "editor_score": 8.6,
+      "store_rating": 5.0,
+      "review_count": 24,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "store_url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l",
+      "updated_at": "2026-11-23"
+    },
+    {
+      "id": "quzio-whitney-torso",
+      "category": "molded",
+      "brand": "Quzio",
+      "name": "Whitney Big Booty Torso",
+      "price_usd": 472.30,
+      "editor_score": 8.4,
+      "store_rating": 5.0,
+      "review_count": 24,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "store_url": "https://quziostore.com/products/whitney-17-4lb-silicone-big-booty-torso-elongated-legs-realistic-female-sex-doll-male-masturbator",
+      "updated_at": "2026-11-23"
+    },
+    {
+      "id": "quzio-cora-torso",
+      "category": "molded",
+      "brand": "Quzio",
+      "name": "Cora 1:1 Large Torso",
+      "price_usd": 683.20,
+      "editor_score": 8.3,
+      "store_rating": 5.0,
+      "review_count": 24,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "store_url": "https://quziostore.com/products/cora-silicone-1-1-large-realistic-sex-torso-real-skin-texture-18kg-39-68lbs-silicone-torso-sex-doll-jelly-boobs",
+      "updated_at": "2026-11-23"
+    }
+  ]
+}

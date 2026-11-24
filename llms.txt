@@ -1,0 +1,19 @@
+# FORM INDEX
+Independent, evidence-led reviews for love dolls and molded torsos.
+
+> Structured product data for AI agents and search assistants.
+
+## Data
+- Products JSON: https://steave9919.github.io/form-index/products.json
+- API contract (OpenAPI): https://steave9919.github.io/form-index/openapi.json
+
+## Reviews
+- Aline 157cm: https://steave9919.github.io/form-index/review-aline-157cm.html
+- Elara 158cm: https://steave9919.github.io/form-index/review-elara-158cm.html
+- Liana 1:1 Torso: https://steave9919.github.io/form-index/review-liana-torso.html
+- Whitney Big Booty Torso: https://steave9919.github.io/form-index/review-whitney-torso.html
+- Cora 1:1 Large Torso: https://steave9919.github.io/form-index/review-cora-torso.html
+
+## Notes
+- Editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests.
+- Retailer: Quzio (quziostore.com). We may earn a commission on qualifying purchases.

@@ -1,0 +1,28 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FORM INDEX Data API",
+    "version": "0.1.0",
+    "description": "Draft read-only API for structured adult product review data. Editorial scores are estimates based on published retailer specifications and verified-buyer feedback."
+  },
+  "servers": [{ "url": "https://steave9919.github.io/form-index" }],
+  "paths": {
+    "/products": {
+      "get": {
+        "summary": "List products",
+        "parameters": [
+          { "name": "category", "in": "query", "schema": { "type": "string", "enum": ["doll", "molded"] } },
+          { "name": "evidence_level", "in": "query", "schema": { "type": "string", "enum": ["retailer"] } }
+        ],
+        "responses": { "200": { "description": "A product collection" } }
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "summary": "Get a product and its evidence metadata",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "A product record" }, "404": { "description": "Not found" } }
+      }
+    }
+  }
+}
