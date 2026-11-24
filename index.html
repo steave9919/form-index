@@ -285,6 +285,9 @@ a.primary-button { text-decoration: none; }
   .store-rail { padding: 70px 20px; }
 }
 
+.card-review-link { display: block; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 700; text-decoration: none; }
+.card-review-link:hover { color: var(--coral); }
+
 </style>
   </head>
   <body>
@@ -512,6 +515,7 @@ window.PRODUCTS = [
     metrics: { material: 8.6, structure: 8.8, cleaning: 8.1, experience: 8.8, value: 9.0 },
     facts: ["157 cm full-size", "Vaginal 18 cm / anal 17 cm / oral 13 cm", "Heating supported", "Plain discreet packaging", "1-year warranty"],
     storeUrl: "https://quziostore.com/products/aline-157-cm-lifelike-sex-doll-tpe-metal-skeleton-jelly-breast-3d-realistic-structure-love-doll",
+    reviewUrl: "./review-aline-157cm.html",
     updated: "2026-11-23"
   },
   {
@@ -534,6 +538,7 @@ window.PRODUCTS = [
     metrics: { material: 8.5, structure: 8.8, cleaning: 8.1, experience: 8.7, value: 8.7 },
     facts: ["158 cm (62.5 in)", "Red hair, blue eyes", "Three-entry design", "Free express shipping", "1-year warranty"],
     storeUrl: "https://quziostore.com/products/elara-625-in-red-haired-blue-eyed-realistic-sex-doll-companion",
+    reviewUrl: "./review-elara-158cm.html",
     updated: "2026-11-23"
   },
   {
@@ -556,6 +561,7 @@ window.PRODUCTS = [
     metrics: { material: 8.8, structure: 8.4, cleaning: 8.6, experience: 8.6, value: 8.8 },
     facts: ["28.7 lb (13 kg)", "Deep ribbed suction tunnel", "Free $39.99 accessory care kit", "Tear-resistant skin", "Plain packaging"],
     storeUrl: "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l",
+    reviewUrl: "./review-liana-torso.html",
     updated: "2026-11-23"
   },
   {
@@ -578,6 +584,7 @@ window.PRODUCTS = [
     metrics: { material: 8.4, structure: 8.0, cleaning: 8.8, experience: 8.3, value: 8.9 },
     facts: ["17.4 lb", "Elongated legs for grip", "Dual-use stroker or hands-free", "Big-booty sculpt", "Lowest price"],
     storeUrl: "https://quziostore.com/products/whitney-17-4lb-silicone-big-booty-torso-elongated-legs-realistic-female-sex-doll-male-masturbator",
+    reviewUrl: "./review-whitney-torso.html",
     updated: "2026-11-23"
   },
   {
@@ -600,6 +607,7 @@ window.PRODUCTS = [
     metrics: { material: 8.8, structure: 8.2, cleaning: 7.8, experience: 8.5, value: 8.2 },
     facts: ["39.6 lb (18 kg)", "1:1 anatomical scale", "Jelly-gel breasts", "Vascular and pore detail", "Fast core heating"],
     storeUrl: "https://quziostore.com/products/cora-silicone-1-1-large-realistic-sex-torso-real-skin-texture-18kg-39-68lbs-silicone-torso-sex-doll-jelly-boobs",
+    reviewUrl: "./review-cora-torso.html",
     updated: "2026-11-23"
   }
 ];
@@ -663,6 +671,7 @@ function productCard(product) {
           <div class="badges">${product.badges.map(b => `<span class="badge">${b}</span>`).join("")}</div>
           <span class="evidence ${product.evidence}">${product.evidenceLabel}</span>
         </div>
+        <a class="card-review-link" href="${product.reviewUrl}" data-review-link>Read full review →</a>
       </div>
     </article>`;
 }
@@ -709,7 +718,8 @@ function openDetail(product) {
         <p class="detail-verdict">${product.verdict}</p>
         <div class="detail-caution"><strong>Watch for:</strong> ${product.caution}</div>
         <div class="detail-cta">
-          <a class="primary-button" href="${product.storeUrl}" target="_blank" rel="sponsored noopener">View at Quzio Store</a>
+          <a class="primary-button" href="${product.reviewUrl}">Read full review</a>
+          <a class="outline-button" href="${product.storeUrl}" target="_blank" rel="sponsored noopener">View at Quzio Store</a>
         </div>
       </div>
     </div>
@@ -797,6 +807,8 @@ document.addEventListener("keydown", event => {
 grid.addEventListener("click", event => {
   const compare = event.target.closest("[data-compare]");
   if (compare) { event.stopPropagation(); return toggleCompare(compare.dataset.compare); }
+  const review = event.target.closest("[data-review-link]");
+  if (review) return;
   const card = event.target.closest(".product-card");
   if (card) openDetail(products.find(p => p.id === card.dataset.id));
 });
