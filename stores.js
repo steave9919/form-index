@@ -73,7 +73,7 @@
       const rating = state.ratings.find(item => item.store_id === store.id) || {};
       const reviewCount = Number(rating.review_count || 0);
       const average = reviewCount ? Number(rating.average_rating).toFixed(1) : null;
-      const productLinks = products.slice(0, 4).map(product => `<a class="product-link" href="${esc(product.product_url)}" target="_blank" rel="sponsored noopener"><span>${esc(product.name)}</span><span>${esc(price(product.price_usd, product.currency))} ↗</span></a>`).join("");
+      const productLinks = products.slice(0, 5).map(product => `<a class="product-link" href="${esc(product.product_url)}" target="_blank" rel="sponsored noopener"><span>${esc(product.name)}</span><span>${esc(price(product.price_usd, product.currency))} ↗</span></a>`).join("");
       return `<article class="store">
         <div class="store-top">
           <div class="store-avatar">${esc((store.name || "S").charAt(0))}</div>
