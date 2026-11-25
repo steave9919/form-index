@@ -44,7 +44,7 @@
     .btn.wide{width:100%;margin-top:18px;padding:11px}
     .error{margin-top:14px;padding:10px 12px;border-radius:8px;background:#fff0ee;color:var(--red);font-size:13px}
     .notice{padding:12px 14px;border:1px solid #b8dfcb;background:#effaf4;border-radius:8px;color:var(--green)}
-    .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:18px}
+    .stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-bottom:18px}
     .stat{padding:18px}
     .stat span{display:block;color:var(--muted);font-size:12px;font-weight:700}
     .stat strong{display:block;font-size:28px;line-height:1.15;margin-top:6px;letter-spacing:-.04em}
@@ -66,12 +66,16 @@
     .status.published{background:#e8f7ef;color:#18794e}
     .status.hidden{background:#fff4db;color:#8a5a00}
     .status.removed{background:#feeceb;color:#b42318}
+    .status.pending{background:#fff4db;color:#8a5a00}
+    .status.in_review{background:#e8f0fb;color:#1b5a9b}
+    .status.resolved{background:#e8f7ef;color:#18794e}
+    .status.dismissed{background:#eef0f3;color:#616871}
     .actions{display:flex;gap:6px;flex-wrap:wrap;min-width:130px}
     .empty{padding:48px 20px;text-align:center;color:var(--muted)}
     .loading{padding:60px 20px;text-align:center;color:var(--muted)}
     .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#17191d;color:#fff;padding:10px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:10}
     .toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:900px){.shell{grid-template-columns:1fr}.side{height:auto;position:static;padding:14px 18px;flex-direction:row;align-items:center}.side-label,.nav{display:none}.side-foot{margin:0 0 0 auto;max-width:50%}.main{padding:20px 14px 40px}.stats{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){.shell{grid-template-columns:1fr}.side{height:auto;position:static;padding:14px 18px;flex-direction:row;align-items:center}.side-label,.nav{display:none}.side-foot{margin:0 0 0 auto;max-width:50%}.main{padding:20px 14px 40px}.stats{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:560px){.stats{grid-template-columns:1fr 1fr}.toolbar>*{width:100%}.tabs{width:100%}.tab{flex:1}.top{flex-direction:column}.side-foot{max-width:65%}}
   </style>
 </head>
@@ -123,6 +127,7 @@
         <div class="panel stat"><span>已隐藏帖子</span><strong id="statHidden">—</strong></div>
         <div class="panel stat"><span>全部评论</span><strong id="statComments">—</strong></div>
         <div class="panel stat"><span>店铺评价</span><strong id="statReviews">—</strong></div>
+        <div class="panel stat"><span>待处理举报</span><strong id="statReports">—</strong></div>
       </div>
 
       <section class="panel">
@@ -131,6 +136,7 @@
             <button class="tab active" data-view="posts">帖子</button>
             <button class="tab" data-view="comments">评论</button>
             <button class="tab" data-view="reviews">店铺评价</button>
+            <button class="tab" data-view="reports">举报</button>
           </div>
           <input class="search" id="searchInput" type="search" placeholder="搜索标题、正文或作者">
           <select id="statusFilter" aria-label="内容状态">

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Content, Privacy or Safety — FORM INDEX</title>
+  <meta name="description" content="Privately report a factual correction, privacy issue, safety concern, harassment, impersonation, account request or content-removal issue to FORM INDEX.">
+  <link rel="canonical" href="https://lllaf.com/report.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FORM INDEX">
+  <meta property="og:title" content="Report a Problem to FORM INDEX">
+  <meta property="og:description" content="A private route for corrections, privacy requests, safety concerns and content removal.">
+  <meta property="og:url" content="https://lllaf.com/report.html">
+  <link rel="stylesheet" href="./trust.css">
+  <script src="./config.js?v=20261125"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="bar">18+ · Private report · Do not include intimate images or identity documents</div>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="https://lllaf.com/" aria-label="FORM INDEX home">
+        <span class="brand-mark">FI</span>
+        <span><b>FORM INDEX</b><small>REPORT &amp; REMOVAL</small></span>
+      </a>
+      <nav class="nav" aria-label="Trust pages">
+        <a href="./guide.html">Buying guide</a>
+        <a href="./methodology.html">Method</a>
+        <a href="./about.html">About</a>
+        <a href="./community-guidelines.html">Rules</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./report.html" aria-current="page">Report</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow"><span>Private</span> Corrections · Privacy · Safety · Appeals</p>
+      <h1>Tell us what is wrong or unsafe.</h1>
+      <p class="lead">Use this form for factual corrections, privacy requests, account removal, safety concerns, harassment, impersonation, brand conduct or an appeal. The report is stored privately and is not published in the community.</p>
+      <p class="meta">Urgent personal danger: contact local emergency services instead of waiting for a website report.</p>
+    </section>
+
+    <div class="notice danger">
+      Do not upload or paste intimate images, identity documents, passwords, order numbers, tracking numbers, addresses or payment details. A URL and a concise factual description are enough to begin.
+    </div>
+
+    <div class="report-grid">
+      <form class="report-form" id="reportForm">
+        <div class="field">
+          <label for="reportType">What needs review?</label>
+          <select id="reportType" name="report_type" required>
+            <option value="">Select a category</option>
+            <option value="factual_correction">Factual correction</option>
+            <option value="privacy_request">Privacy or account request</option>
+            <option value="content_removal">Content removal</option>
+            <option value="safety_concern">Safety concern</option>
+            <option value="harassment">Harassment or doxxing</option>
+            <option value="impersonation">Impersonation or fake account</option>
+            <option value="brand_conduct">Brand or retailer conduct</option>
+            <option value="appeal">Moderation appeal</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="targetUrl">Page or content URL</label>
+          <input id="targetUrl" name="target_url" type="url" required maxlength="500" placeholder="https://lllaf.com/…">
+          <small>If the issue is about a profile or reply, link to the nearest public page.</small>
+        </div>
+
+        <div class="field">
+          <label for="details">What happened, and what should be reviewed?</label>
+          <textarea id="details" name="details" minlength="20" maxlength="3000" required placeholder="Example: The review says the product weighs 17.4 lb, but the retailer page now lists a different weight. Please check the current variant."></textarea>
+          <small>Minimum 20 characters. Do not include private information that is not necessary.</small>
+        </div>
+
+        <div class="field">
+          <label for="contactEmail">Contact email (optional)</label>
+          <input id="contactEmail" name="contact_email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com">
+          <small>Leave blank if the report can be reviewed without follow-up. This is not shown publicly.</small>
+        </div>
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="websiteField">Website</label>
+          <input id="websiteField" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label class="check">
+            <input name="good_faith" type="checkbox" required>
+            <span>I am submitting this report in good faith and understand that knowingly false or abusive reports may be rejected.</span>
+          </label>
+        </div>
+
+        <button class="btn" id="submitReport" type="submit">Submit private report</button>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <aside class="side-note">
+        <span class="tag">What happens next</span>
+        <h3>We review the linked content and evidence.</h3>
+        <ol>
+          <li>Credible privacy, consent or serious safety reports can lead to immediate hiding while review continues.</li>
+          <li>Corrections are checked against the current source; material changes may update the page and its review date.</li>
+          <li>Privacy and deletion requests may require account verification, but not a password or identity document in the first message.</li>
+          <li>Appeals can introduce new evidence. A decision is not final merely because the first report was closed.</li>
+        </ol>
+        <p>We aim to acknowledge standard reports within two business days.</p>
+        <p><a href="./community-guidelines.html" style="color:#c8e74f">Read the community rules</a> or <a href="./privacy.html" style="color:#c8e74f">privacy notice</a>.</p>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://lllaf.com/">Community home</a>
+        <a href="./about.html">About</a>
+        <a href="./community-guidelines.html">Community rules</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./report.html">Report</a>
+      </div>
+      Reports are private. Do not use this form for emergencies or to send sensitive identity documents.
+    </footer>
+  </main>
+
+  <script>
+  (() => {
+    "use strict";
+    const form = document.querySelector("#reportForm");
+    const button = document.querySelector("#submitReport");
+    const status = document.querySelector("#formStatus");
+    const cfg = window.FI_CONFIG || {};
+    let client = null;
+
+    function setStatus(message, isError) {
+      status.textContent = message;
+      status.classList.toggle("error", Boolean(isError));
+      status.hidden = false;
+    }
+
+    function reportReference() {
+      const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      const bytes = crypto.getRandomValues(new Uint8Array(6));
+      const suffix = Array.from(bytes, byte => alphabet[byte % alphabet.length]).join("");
+      return `FI-${Date.now().toString(36).toUpperCase()}-${suffix}`;
+    }
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      if (String(data.get("website") || "").trim()) {
+        form.reset();
+        setStatus("Your report was received.", false);
+        return;
+      }
+
+      if (!cfg.supabaseUrl || !cfg.supabaseAnonKey || !window.supabase) {
+        setStatus("The private report service is unavailable. Please try again later.", true);
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = "Submitting…";
+      status.hidden = true;
+
+      try {
+        client = client || window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
+        const ref = reportReference();
+        const { error } = await client.from("content_reports").insert({
+          public_ref: ref,
+          report_type: String(data.get("report_type") || ""),
+          target_url: String(data.get("target_url") || "").trim(),
+          details: String(data.get("details") || "").trim(),
+          contact_email: String(data.get("contact_email") || "").trim() || null,
+          good_faith: data.get("good_faith") === "on"
+        });
+        if (error) throw error;
+        form.reset();
+        setStatus(`Your private report was received. Reference: ${ref}. Keep this reference if you need to follow up.`, false);
+      } catch (error) {
+        console.error("Report submission failed", error);
+        setStatus("The report could not be submitted. Please try again later.", true);
+      } finally {
+        button.disabled = false;
+        button.textContent = "Submit private report";
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

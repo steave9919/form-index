@@ -16,6 +16,7 @@
     posts: [],
     comments: [],
     reviews: [],
+    reports: [],
     stores: [],
     loading: false
   };
@@ -92,20 +93,25 @@
     $("#tableWrap").hidden = true;
     $("#emptyState").hidden = true;
     try {
-      const [postsResult, commentsResult, reviewsResult, storesResult] = await Promise.all([
+      const [postsResult, commentsResult, reviewsResult, storesResult, reportsResult] = await Promise.all([
         state.client.from("posts").select("*").order("created_at", { ascending: false }),
         state.client.from("comments").select("*").order("created_at", { ascending: false }),
         state.client.from("store_reviews").select("*").order("created_at", { ascending: false }),
-        state.client.from("stores").select("id,name,status")
+        state.client.from("stores").select("id,name,status"),
+        state.client.from("content_reports").select("*").order("created_at", { ascending: false })
       ]);
       if (postsResult.error) throw postsResult.error;
       if (commentsResult.error) throw commentsResult.error;
       if (reviewsResult.error) throw reviewsResult.error;
       if (storesResult.error) throw storesResult.error;
+      if (reportsResult.error) {
+        console.warn("Could not read content reports", reportsResult.error);
+      }
       state.posts = postsResult.data || [];
       state.comments = commentsResult.data || [];
       state.reviews = reviewsResult.data || [];
       state.stores = storesResult.data || [];
+      state.reports = reportsResult.error ? [] : (reportsResult.data || []);
       render();
     } catch (error) {
       $("#loading").textContent = error.message || "无法读取社区内容";
@@ -121,21 +127,49 @@
     $("#statHidden").textContent = state.posts.filter(item => item.status === "hidden").length;
     $("#statComments").textContent = state.comments.length;
     $("#statReviews").textContent = state.reviews.length;
+    $("#statReports").textContent = state.reports.filter(item => item.status === "pending").length;
   }
 
   function currentRows() {
     const query = $("#searchInput").value.trim().toLowerCase();
     const status = $("#statusFilter").value;
-    const rows = state.view === "posts" ? state.posts : state.view === "comments" ? state.comments : state.reviews;
+    const rows = state.view === "posts"
+      ? state.posts
+      : state.view === "comments"
+        ? state.comments
+        : state.view === "reviews"
+          ? state.reviews
+          : state.reports;
     return rows.filter(row => {
       if (status && row.status !== status) return false;
       if (!query) return true;
-      return [row.title, row.body, row.author_name, row.community]
+      return [row.title, row.body, row.author_name, row.community, row.public_ref, row.report_type, row.target_url, row.details, row.contact_email]
         .filter(Boolean)
         .join(" ")
         .toLowerCase()
         .includes(query);
     });
+  }
+
+  function statusOptions() {
+    const select = $("#statusFilter");
+    const options = state.view === "reports"
+      ? [
+          ["", "全部状态"],
+          ["pending", "待处理"],
+          ["in_review", "处理中"],
+          ["resolved", "已解决"],
+          ["dismissed", "已驳回"]
+        ]
+      : [
+          ["", "全部状态"],
+          ["published", "已发布"],
+          ["hidden", "已隐藏"],
+          ["removed", "已移除"]
+        ];
+    select.innerHTML = options
+      .map(([value, label]) => `<option value="${value}">${label}</option>`)
+      .join("");
   }
 
   function postTitle(postId) {
@@ -152,6 +186,31 @@
     $("#tableWrap").hidden = rows.length === 0;
     $("#emptyState").hidden = rows.length !== 0;
     if (!rows.length) return;
+
+    if (state.view === "reports") {
+      $("#contentRows").innerHTML = rows.map(item => {
+        const status = item.status || "pending";
+        const reportLabel = String(item.report_type || "other").replaceAll("_", " ");
+        const nextActions = status === "pending"
+          ? `<button class="btn secondary small" data-report-next="in_review" data-report-id="${esc(item.id)}">开始处理</button>`
+          : status === "in_review"
+            ? `<button class="btn success small" data-report-next="resolved" data-report-id="${esc(item.id)}">标记已解决</button>
+               <button class="btn danger small" data-report-next="dismissed" data-report-id="${esc(item.id)}">驳回</button>`
+            : `<button class="btn secondary small" data-report-next="in_review" data-report-id="${esc(item.id)}">重新打开</button>`;
+        return `<tr>
+          <td class="title-cell">
+            <b>${esc(item.public_ref || "No reference")} · ${esc(reportLabel)}</b>
+            <small>${esc(item.details || "")}</small>
+            <small><a href="${esc(item.target_url || "#")}" target="_blank" rel="noopener noreferrer">打开相关页面</a></small>
+          </td>
+          <td>${esc(item.contact_email || "Anonymous")}<span class="meta">Private report</span></td>
+          <td><span class="status ${esc(status)}">${esc(status)}</span></td>
+          <td>${esc(formatDate(item.created_at))}</td>
+          <td><div class="actions">${nextActions}</div></td>
+        </tr>`;
+      }).join("");
+      return;
+    }
 
     $("#contentRows").innerHTML = rows.map(item => {
       const isPost = state.view === "posts";
@@ -196,6 +255,29 @@
     showToast(`已${action}`);
   }
 
+  async function updateReport(id, nextStatus) {
+    const item = state.reports.find(report => report.id === id);
+    if (!item) return;
+    const labels = {
+      in_review: "开始处理",
+      resolved: "标记为解决",
+      dismissed: "驳回"
+    };
+    if (!window.confirm(`确认将举报标记为「${labels[nextStatus] || nextStatus}」？`)) return;
+    const { error } = await state.client
+      .from("content_reports")
+      .update({ status: nextStatus, updated_at: new Date().toISOString() })
+      .eq("id", id);
+    if (error) {
+      showToast(`操作失败：${error.message}`);
+      return;
+    }
+    item.status = nextStatus;
+    item.updated_at = new Date().toISOString();
+    render();
+    showToast(`举报状态已更新为 ${nextStatus}`);
+  }
+
   function bindEvents() {
     $("#loginForm").addEventListener("submit", async event => {
       event.preventDefault();
@@ -226,6 +308,7 @@
       state.posts = [];
       state.comments = [];
       state.reviews = [];
+      state.reports = [];
       state.stores = [];
       showLogin();
     });
@@ -233,6 +316,7 @@
     document.querySelectorAll(".tab").forEach(tab => {
       tab.addEventListener("click", () => {
         state.view = tab.dataset.view;
+        statusOptions();
         render();
       });
     });
@@ -241,8 +325,12 @@
     $("#refreshButton").addEventListener("click", loadData);
     $("#contentRows").addEventListener("click", event => {
       const button = event.target.closest("[data-moderate]");
-      if (!button) return;
-      moderate(button.dataset.moderate, button.dataset.next);
+      if (button) {
+        moderate(button.dataset.moderate, button.dataset.next);
+        return;
+      }
+      const reportButton = event.target.closest("[data-report-next]");
+      if (reportButton) updateReport(reportButton.dataset.reportId, reportButton.dataset.reportNext);
     });
   }
 
