@@ -512,6 +512,7 @@ window.FI_DATA = {
       computeScores(demoVotes());
       state.user = readJSON(LS.user, null);
     } else {
+      await restoreSupabaseSession();
       await loadSupabase();
     }
     state.loading = false;
@@ -520,7 +521,7 @@ window.FI_DATA = {
 
   function enrichPost(p) {
     return Object.assign({}, p, {
-      author: p.author || (p.profiles && p.profiles.username) || "member",
+      author: p.author_name || p.author || (p.profiles && p.profiles.username) || "member",
       base_score: p.base_score != null ? p.base_score : (p.score || 0)
     });
   }
@@ -529,16 +530,17 @@ window.FI_DATA = {
     try {
       const results = await Promise.all([
         supabase.from("posts").select("*").order("created_at", { ascending: false }),
-        supabase.from("comments").select("*").order("created_at", { ascending: true }),
-        supabase.from("profiles").select("id, username")
+        supabase.from("comments").select("*").order("created_at", { ascending: true })
       ]);
       const posts = results[0].data || [];
       const comments = results[1].data || [];
-      const profiles = results[2].data || [];
       if (results[0].error) throw results[0].error;
-      const nameOf = id => (profiles.find(p => p.id === id) || {}).username || "member";
-      state.posts = posts.map(p => enrichPost(Object.assign({}, p, { author: nameOf(p.author_id) })));
-      state.comments = comments.map(c => Object.assign({}, c, { author: nameOf(c.author_id) }));
+      if (results[1].error) throw results[1].error;
+      state.posts = posts.map(enrichPost);
+      state.comments = comments.map(c => Object.assign({}, c, {
+        author: c.author_name || c.author || "member",
+        base_score: c.base_score != null ? c.base_score : 0
+      }));
       await refreshVotesSupabase();
     } catch (e) {
       console.error(e);
@@ -549,17 +551,18 @@ window.FI_DATA = {
   }
 
   async function refreshVotesSupabase() {
-    const { data } = await supabase.from("votes").select("*");
+    const scoreResult = await supabase.rpc("get_vote_scores");
+    if (scoreResult.error) throw scoreResult.error;
     const votes = {};
-    (data || []).forEach(v => {
+    (scoreResult.data || []).forEach(v => {
       const key = voteKey(v);
-      votes[key] = (votes[key] || 0) + v.value;
+      votes[key] = Number(v.score || 0);
     });
     state.myVotes = {};
     if (state.user) {
-      (data || []).forEach(v => {
-        if (v.user_id === state.user.id) state.myVotes[voteKey(v)] = v.value;
-      });
+      const mineResult = await supabase.rpc("get_my_votes");
+      if (mineResult.error) throw mineResult.error;
+      (mineResult.data || []).forEach(v => { state.myVotes[voteKey(v)] = v.value; });
     }
     computeScores(votes);
   }
@@ -848,6 +851,22 @@ window.FI_DATA = {
     } catch (e) { return "member"; }
   }
 
+  async function restoreSupabaseSession() {
+    try {
+      const { data, error } = await supabase.auth.getSession();
+      if (error) throw error;
+      if (!data.session || !data.session.user) {
+        state.user = null;
+        return;
+      }
+      const user = data.session.user;
+      state.user = { id: user.id, username: await loadProfile(user.id), email: user.email };
+    } catch (e) {
+      console.error(e);
+      state.user = null;
+    }
+  }
+
   async function logout() {
     if (!isDemo) await supabase.auth.signOut();
     state.user = null;
@@ -896,6 +915,7 @@ window.FI_DATA = {
       }
       const { data, error } = await supabase.from("posts").insert({
         author_id: state.user.id,
+        author_name: state.user.username,
         community: post.community,
         product_id: post.product_id,
         title: post.title,
@@ -942,6 +962,7 @@ window.FI_DATA = {
         post_id: postId,
         parent_id: parentId,
         author_id: state.user.id,
+        author_name: state.user.username,
         body: body
       });
       if (error) throw error;

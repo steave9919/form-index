@@ -1,7 +1,7 @@
 // FORM INDEX community configuration.
-// Add your free Supabase project values below to enable real accounts and
-// shared posts/comments. Leave blank to run in local demo mode.
+// Publishable keys are safe for browser use only with the RLS policies in
+// work/supabase-schema.sql. Never place a secret/service-role key here.
 window.FI_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://umxmcaeqyowzxierareu.supabase.co",
+  supabaseAnonKey: "sb_publishable_fOaFOig-WQJKJMSzr0c9bQ_WXrD4nh9"
 };
