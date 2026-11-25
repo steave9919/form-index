@@ -2,26 +2,226 @@
   "openapi": "3.1.0",
   "info": {
     "title": "FORM INDEX Data API",
-    "version": "0.1.0",
-    "description": "Draft read-only API for structured companion product review data. Editorial scores are estimates based on published retailer specifications and verified-buyer feedback."
+    "version": "1.0.0",
+    "description": "Read-only structured data for companion doll and silicone companion reviews. Editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests."
   },
-  "servers": [{ "url": "https://lllaf.com" }],
+  "servers": [
+    {
+      "url": "https://lllaf.com"
+    }
+  ],
   "paths": {
     "/products": {
       "get": {
         "summary": "List products",
         "parameters": [
-          { "name": "category", "in": "query", "schema": { "type": "string", "enum": ["doll", "molded"] } },
-          { "name": "evidence_level", "in": "query", "schema": { "type": "string", "enum": ["retailer"] } }
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "doll",
+                "molded"
+              ]
+            }
+          },
+          {
+            "name": "evidence_level",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "retailer"
+              ]
+            }
+          }
         ],
-        "responses": { "200": { "description": "A product collection" } }
+        "responses": {
+          "200": {
+            "description": "A product collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductList"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/products/{id}": {
       "get": {
         "summary": "Get a product and its evidence metadata",
-        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
-        "responses": { "200": { "description": "A product record" }, "404": { "description": "Not found" } }
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A product record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "price_usd",
+          "editor_score",
+          "store_url",
+          "verdict",
+          "best_for",
+          "faq"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "doll",
+              "molded"
+            ]
+          },
+          "brand": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price_usd": {
+            "type": "number"
+          },
+          "original_price_usd": {
+            "type": "number"
+          },
+          "editor_score": {
+            "type": "number"
+          },
+          "store_rating": {
+            "type": "number"
+          },
+          "review_count": {
+            "type": "integer"
+          },
+          "evidence_level": {
+            "type": "string"
+          },
+          "statement_type": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string"
+          },
+          "best_for": {
+            "type": "string"
+          },
+          "pros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "specs": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "faq": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FAQItem"
+            }
+          },
+          "review": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "review_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "image": {
+            "type": "string",
+            "format": "uri"
+          },
+          "store_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "ProductList": {
+        "type": "object",
+        "properties": {
+          "meta": {
+            "type": "object"
+          },
+          "site": {
+            "type": "object"
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          }
+        }
+      },
+      "FAQItem": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          }
+        }
       }
     }
   }

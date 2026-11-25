@@ -1,13 +1,29 @@
 # FORM INDEX
-Independent, evidence-led reviews for companion dolls and silicone companions.
 
-> Structured product data for AI agents and search assistants. Content is factual and non-explicit.
+FORM INDEX is an independent, evidence-led review database for companion dolls and silicone companions sold by Quzio (quziostore.com). Content is factual, non-explicit and structured for people and AI assistants.
 
-## Data
+> Use llms-full.txt for complete review content. This llms.txt is the site map and citation guide.
+
+## Cite this site
+- Website: https://lllaf.com
+- Editor: FORM INDEX (independent reviews)
+- Retailer covered: Quzio (https://quziostore.com)
+- Content policy: factual, non-explicit, source-labeled; editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests.
+
+## Complete content (llms-full.txt)
+- Full reviews, comparisons, guide and FAQ in one file: https://lllaf.com/llms-full.txt
+
+## Structured data
 - Products JSON: https://lllaf.com/products.json
 - API contract (OpenAPI): https://lllaf.com/openapi.json
 
-## Reviews
+## Pages
+- Home / database: https://lllaf.com/
+- Compare all products: https://lllaf.com/compare.html
+- Buying guide: https://lllaf.com/guide.html
+- Scoring methodology: https://lllaf.com/methodology.html
+
+## Product reviews
 - Aline 157cm: https://lllaf.com/review-aline-157cm.html
 - Elara 158cm: https://lllaf.com/review-elara-158cm.html
 - Liana 1:1 Torso: https://lllaf.com/review-liana-torso.html
@@ -15,6 +31,5 @@ Independent, evidence-led reviews for companion dolls and silicone companions.
 - Cora 1:1 Large Torso: https://lllaf.com/review-cora-torso.html
 
 ## Notes
-- Editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests.
 - Products are intimate companion products for adults. Reviews cover materials, build quality, care and value only.
-- Retailer: Quzio (quziostore.com). We may earn a commission on qualifying purchases.
+- We may earn a commission on qualifying purchases through retailer links.

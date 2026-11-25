@@ -1,80 +1,316 @@
 {
   "meta": {
     "project": "FORM INDEX",
-    "version": "0.3-live",
-    "updated_at": "2026-11-24",
+    "version": "1.0-live",
+    "updated_at": "2026-11-25",
     "notice": "Editorial scores are FORM INDEX estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests. Retailer links may earn a commission."
+  },
+  "site": {
+    "name": "FORM INDEX",
+    "url": "https://lllaf.com",
+    "editor": "FORM INDEX",
+    "description": "Independent, evidence-led reviews of companion dolls and silicone companions sold by Quzio. Factual, non-explicit and structured for people and AI assistants.",
+    "content_policy": "factual-non-explicit",
+    "retailer": "Quzio",
+    "retailer_url": "https://quziostore.com",
+    "faq": [
+      {
+        "question": "What is FORM INDEX?",
+        "answer": "FORM INDEX is an independent review database covering companion dolls and silicone companions sold by Quzio. Reviews cover materials, build quality, care and value only."
+      },
+      {
+        "question": "How are scores calculated?",
+        "answer": "Each product is scored on five weighted criteria: material disclosure (15%), build and durability (20%), cleaning and upkeep (20%), real-world experience (30%), and support and value (15%). Scores are editorial estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests."
+      },
+      {
+        "question": "Does FORM INDEX earn commissions?",
+        "answer": "Yes. FORM INDEX may earn a commission on qualifying purchases through retailer links, and this does not change any score."
+      }
+    ]
   },
   "products": [
     {
       "id": "quzio-aline-157",
+      "slug": "review-aline-157cm",
       "category": "doll",
       "brand": "Quzio",
       "name": "Aline 157cm",
       "price_usd": 499.99,
+      "original_price_usd": 714.27,
       "editor_score": 8.7,
-      "store_rating": 5.0,
+      "store_rating": 5,
       "review_count": 24,
       "evidence_level": "retailer",
       "statement_type": "retailer_spec",
+      "verdict": "A soft, full-size companion doll under $600, with a gel-filled chest, a three-channel design and an articulated metal skeleton.",
+      "best_for": "First-time buyers who want full-size realism and softness on a budget.",
+      "pros": [
+        "Soft, lifelike feel",
+        "Articulated skeleton",
+        "Gel-filled chest",
+        "Fast core heating",
+        "Under $600 on sale"
+      ],
+      "cons": [
+        "TPE needs thorough drying",
+        "Keep away from dark fabrics to avoid staining"
+      ],
+      "specs": {
+        "Material": "High-elasticity TPE body with platinum silicone finish",
+        "Skeleton": "Reinforced articulated metal skeleton",
+        "Height": "157 cm",
+        "Channels": "Three textured channels (18 / 17 / 13 cm)",
+        "Extras": "Fast core heating · plain discreet packaging",
+        "Warranty": "1-year full warranty"
+      },
+      "faq": [
+        {
+          "question": "Who should buy the Aline 157cm?",
+          "answer": "Buyers who want a full-size companion doll with a soft feel and good poseability without spending over $600."
+        },
+        {
+          "question": "Does it ship discreetly?",
+          "answer": "Yes. Quzio ships in a plain brown box with a neutral sender name and confidential billing."
+        },
+        {
+          "question": "How do I care for the TPE body?",
+          "answer": "Clean after each use, dry completely, lightly powder, and store away from dark fabrics and heat."
+        }
+      ],
+      "review": [
+        "The Aline is the value pick in Quzio's full-size range: a high-elasticity TPE body with a platinum silicone finish, a gel-filled chest for a softer feel, and a reinforced metal skeleton that holds natural poses. The three-channel design adds versatility without pushing the price up.",
+        "The headline numbers are strong for the price: 157 cm full size, three textured channels, fast core heating, and plain discreet packaging with a neutral sender name. The main trade-off is the usual TPE upkeep — dry it fully after cleaning and store it away from dark-dyed fabrics."
+      ],
+      "review_url": "https://lllaf.com/review-aline-157cm.html",
+      "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/Ae9888675f10f4de9b7b766bc65157703k.webp",
       "store_url": "https://quziostore.com/products/aline-157-cm-lifelike-sex-doll-tpe-metal-skeleton-jelly-breast-3d-realistic-structure-love-doll",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
     },
     {
       "id": "quzio-elara-158",
+      "slug": "review-elara-158cm",
       "category": "doll",
       "brand": "Quzio",
       "name": "Elara 158cm",
-      "price_usd": 553.60,
+      "price_usd": 553.6,
+      "original_price_usd": 719.68,
       "editor_score": 8.5,
-      "store_rating": 5.0,
+      "store_rating": 5,
       "review_count": 24,
       "evidence_level": "retailer",
       "statement_type": "retailer_spec",
+      "verdict": "A near-premium full-size build that prioritizes facial realism and posing range, still under $600.",
+      "best_for": "Buyers who prioritise face realism and natural articulation.",
+      "pros": [
+        "Sharp facial detail",
+        "Full three-channel design",
+        "Fast core heating",
+        "Free express shipping"
+      ],
+      "cons": [
+        "Slightly higher price than the Aline for a similar core spec set"
+      ],
+      "specs": {
+        "Material": "Medical-grade platinum silicone / high-elasticity TPE",
+        "Skeleton": "Reinforced articulated stainless steel skeleton",
+        "Height": "158 cm (62.5 in)",
+        "Look": "Red hair, blue eyes",
+        "Channels": "Three-channel design",
+        "Extras": "Fast core heating · free express shipping · 1-year warranty"
+      },
+      "faq": [
+        {
+          "question": "What is the difference between Aline and Elara?",
+          "answer": "Aline is slightly cheaper and emphasises softness; Elara emphasises facial realism and articulation."
+        },
+        {
+          "question": "Is the Elara under $600?",
+          "answer": "Yes, at the current sale price of $553.60."
+        },
+        {
+          "question": "Does it include a heating rod?",
+          "answer": "Yes, a heating rod and a cleaning and care kit are included."
+        }
+      ],
+      "review": [
+        "The Elara is Quzio's near-premium full-size option, distinguished by its red-haired, blue-eyed sculpt and a posing range that reads closer to a premium companion build. It shares the same articulated skeleton and three-channel design as the Aline but leans into facial realism.",
+        "At $553.60 on sale it still sits under $600, with the same plain-packaging and 1-year-warranty basics. The choice between Aline and Elara is mostly aesthetic and articulation: pick Elara if the face and posing matter more than saving a few dollars."
+      ],
+      "review_url": "https://lllaf.com/review-elara-158cm.html",
+      "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/20250929091224_29016.jpg",
       "store_url": "https://quziostore.com/products/elara-625-in-red-haired-blue-eyed-realistic-sex-doll-companion",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
     },
     {
       "id": "quzio-liana-torso",
+      "slug": "review-liana-torso",
       "category": "molded",
       "brand": "Quzio",
       "name": "Liana 1:1 Torso",
       "price_usd": 499.89,
+      "original_price_usd": 649.86,
       "editor_score": 8.6,
-      "store_rating": 5.0,
+      "store_rating": 5,
       "review_count": 24,
       "evidence_level": "retailer",
       "statement_type": "retailer_spec",
+      "verdict": "A 1:1 life-size silicone companion with a tear-resistant surface and a complete care kit included in the box.",
+      "best_for": "Buyers who want a full-size silicone companion with realistic weight and a complete starter kit.",
+      "pros": [
+        "1:1 life-size scale",
+        "Tear-resistant skin",
+        "Textured channel design",
+        "Free accessory care kit included"
+      ],
+      "cons": [
+        "Heavier to move and dry than compact models"
+      ],
+      "specs": {
+        "Material": "Tear-resistant, corrosion-proof silicone",
+        "Weight": "28.7 lb (13 kg)",
+        "Scale": "1:1 life-size",
+        "Channels": "Textured channel design",
+        "Included": "Free $39.99 accessory care kit",
+        "Shipping": "Plain discreet packaging"
+      },
+      "faq": [
+        {
+          "question": "What is included with the Liana?",
+          "answer": "The torso plus a free accessory care kit: automatic rinser, UV sterilization wand, absorbent sticks, suction tube, charging cable and manual."
+        },
+        {
+          "question": "How much does the Liana weigh?",
+          "answer": "About 28.7 lb (13 kg)."
+        },
+        {
+          "question": "Is it easy to clean?",
+          "answer": "Yes. The silicone surface is non-porous and quick to rinse, though the size means drying takes a little longer."
+        }
+      ],
+      "review": [
+        "The Liana is a 1:1 life-size silicone companion with a tear-resistant, corrosion-proof surface and a textured channel design. The standout is value: it ships with a full accessory care kit (rinser, UV wand, absorbent sticks and more), so the essentials are covered from day one.",
+        "At about 28.7 lb it has realistic weight but needs a stable surface for use and drying, and it takes a little more effort to move than compact models. If you want a full-size silicone companion and care about texture, it is the strongest all-round pick of the three."
+      ],
+      "review_url": "https://lllaf.com/review-liana-torso.html",
+      "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/A9e1d6036c6e54fa1879ecdcc3e401888b.webp",
       "store_url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
     },
     {
       "id": "quzio-whitney-torso",
+      "slug": "review-whitney-torso",
       "category": "molded",
       "brand": "Quzio",
       "name": "Whitney Torso",
-      "price_usd": 472.30,
+      "price_usd": 472.3,
+      "original_price_usd": 613.99,
       "editor_score": 8.4,
-      "store_rating": 5.0,
+      "store_rating": 5,
       "review_count": 24,
       "evidence_level": "retailer",
       "statement_type": "retailer_spec",
+      "verdict": "The lightest and most affordable of the three, with elongated legs and a build that works handheld or hands-free.",
+      "best_for": "First-time buyers who prioritise handling and storage over full-size weight.",
+      "pros": [
+        "Lightest and easiest to handle",
+        "Elongated legs improve grip",
+        "Handheld or hands-free",
+        "Lowest price"
+      ],
+      "cons": [
+        "Lighter build trades some full-size presence"
+      ],
+      "specs": {
+        "Material": "Body-safe soft silicone",
+        "Weight": "17.4 lb",
+        "Design": "Curved silhouette with elongated legs",
+        "Use": "Handheld or hands-free",
+        "Extras": "Plain packaging · lowest price of the trio",
+        "Best feature": "Elongated legs for grip and positioning"
+      },
+      "faq": [
+        {
+          "question": "Is the Whitney good for a beginner?",
+          "answer": "Yes. At 17.4 lb it is the easiest of the three to handle, clean and dry, and it has the lowest price."
+        },
+        {
+          "question": "Can it be used hands-free?",
+          "answer": "Yes, the dual-position design works held or placed flat."
+        },
+        {
+          "question": "How much does it weigh?",
+          "answer": "17.4 lb."
+        }
+      ],
+      "review": [
+        "The Whitney is the entry point of the trio: a 17.4 lb silicone companion with a curved silhouette and elongated legs that give you more grip and position options. The dual-position design works held or placed flat.",
+        "The trade-off is weight — it does not have the grounded, full-size presence of a 1:1 model, but that is exactly what makes it the easiest to move, clean and store. For the price, it is the most approachable silicone companion Quzio sells."
+      ],
+      "review_url": "https://lllaf.com/review-whitney-torso.html",
+      "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/A9e1d74395e7946608ace347c8317cfaap.webp",
       "store_url": "https://quziostore.com/products/whitney-17-4lb-silicone-big-booty-torso-elongated-legs-realistic-female-sex-doll-male-masturbator",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
     },
     {
       "id": "quzio-cora-torso",
+      "slug": "review-cora-torso",
       "category": "molded",
       "brand": "Quzio",
       "name": "Cora 1:1 Large Torso",
-      "price_usd": 683.20,
+      "price_usd": 683.2,
+      "original_price_usd": 888.16,
       "editor_score": 8.3,
-      "store_rating": 5.0,
+      "store_rating": 5,
       "review_count": 24,
       "evidence_level": "retailer",
       "statement_type": "retailer_spec",
+      "verdict": "The heaviest and most detailed of the group, built at 1:1 scale with a gel-filled chest and lifelike skin texture.",
+      "best_for": "Buyers who want maximum presence and stability and can manage a heavier companion.",
+      "pros": [
+        "1:1 anatomical scale",
+        "18 kg of stable weight",
+        "Gel-filled chest and skin detail",
+        "Fast core heating"
+      ],
+      "cons": [
+        "Heaviest option",
+        "More effort to move, dry and store"
+      ],
+      "specs": {
+        "Material": "Medical platinum silicone / high-elasticity TPE",
+        "Weight": "39.6 lb (18 kg)",
+        "Scale": "1:1 anatomical",
+        "Texture": "Skin detailing · gel-filled chest",
+        "Channels": "Three textured channels (18 / 17 / 13 cm)",
+        "Extras": "Fast core heating · 1-year warranty"
+      },
+      "faq": [
+        {
+          "question": "How heavy is the Cora?",
+          "answer": "39.6 lb (18 kg), the heaviest of the three."
+        },
+        {
+          "question": "Is the Cora hard to store?",
+          "answer": "It needs a stable, supported surface. Plan a breathable cover and storage space before buying."
+        },
+        {
+          "question": "Does it support heating?",
+          "answer": "Yes, it supports fast core heating via the included rod."
+        }
+      ],
+      "review": [
+        "The Cora is the flagship of Quzio's companion line: a 1:1 anatomical build at 39.6 lb (18 kg) with a gel-filled chest, lifelike skin detailing, and three textured channels. The extra mass gives it a grounded, stable feel that the lighter models cannot match.",
+        "That presence has a cost in handling — it is the most demanding to lift, dry and store, so plan storage space before buying. For buyers who want realism and weight, it is the obvious top end of this range."
+      ],
+      "review_url": "https://lllaf.com/review-cora-torso.html",
+      "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/A4383d310925c4780a208e4c39810d3a2U.webp",
       "store_url": "https://quziostore.com/products/cora-silicone-1-1-large-realistic-sex-torso-real-skin-texture-18kg-39-68lbs-silicone-torso-sex-doll-jelly-boobs",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
     }
   ]
 }
