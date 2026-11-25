@@ -55,6 +55,17 @@
     .policy{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
     .policy p{margin:0;color:var(--muted);font-size:13px;max-width:780px}
     .policy strong{color:var(--ink)}
+    dialog{border:0;border-radius:14px;padding:24px;width:min(520px,calc(100% - 28px));box-shadow:0 24px 70px rgba(0,0,0,.28)}
+    dialog::backdrop{background:rgba(20,22,25,.55)}
+    dialog h2{margin:0;font-size:22px;letter-spacing:-.035em}
+    dialog p{margin:6px 0 14px;color:var(--muted);font-size:13px}
+    dialog label{display:block;font-size:12px;font-weight:750;margin:12px 0 0}
+    dialog input,dialog select,dialog textarea{display:block;width:100%;margin-top:5px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+    dialog textarea{min-height:120px;resize:vertical}
+    .dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+    .error{padding:9px 11px;background:#fff0ee;color:#b42318;border-radius:8px;font-size:12px}
+    .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,18px);background:#17191d;color:#fff;padding:10px 16px;border-radius:999px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:20}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
     .loading,.empty{padding:48px 20px;text-align:center;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:12px}
     footer{max-width:1120px;margin:0 auto;padding:0 20px 35px;color:var(--muted);font-size:12px}
     @media(max-width:760px){.grid{grid-template-columns:1fr}.nav-links{display:none}.stats{grid-template-columns:1fr 1fr}.policy{grid-template-columns:1fr}h1{font-size:38px}}
@@ -91,7 +102,38 @@
       <a class="btn secondary" href="./methodology.html">Read methodology</a>
     </div>
   </main>
+  <dialog id="reviewDialog">
+    <form id="reviewForm">
+      <h2>Rate <span id="reviewStoreName"></span></h2>
+      <p>Reviews are moderated before publication. Only share your own experience.</p>
+      <input id="reviewStoreId" name="storeId" type="hidden">
+      <label>Product (optional)
+        <select id="reviewProduct" name="productId"><option value="">Store experience</option></select>
+      </label>
+      <label>Rating
+        <select name="rating" required>
+          <option value="5">5 — Excellent</option>
+          <option value="4">4 — Good</option>
+          <option value="3">3 — Average</option>
+          <option value="2">2 — Below average</option>
+          <option value="1">1 — Poor</option>
+        </select>
+      </label>
+      <label>Review title
+        <input name="title" minlength="3" maxlength="120" required>
+      </label>
+      <label>What was your experience?
+        <textarea name="body" minlength="10" maxlength="4000" required placeholder="Delivery, packaging, product accuracy, support or return experience. Do not include private details."></textarea>
+      </label>
+      <p class="error" id="reviewError" hidden></p>
+      <div class="dialog-actions">
+        <button class="btn secondary" id="cancelReview" type="button">Cancel</button>
+        <button class="btn primary" id="submitReview" type="submit">Submit for review</button>
+      </div>
+    </form>
+  </dialog>
   <footer>FORM INDEX · Store directory · <a href="./llms.txt">AI data</a> · <a href="./guide.html#community">Community Q&amp;A</a></footer>
+  <div class="toast" id="toast" role="status"></div>
   <script src="./stores.js"></script>
 </body>
 </html>

@@ -15,6 +15,8 @@
     view: "posts",
     posts: [],
     comments: [],
+    reviews: [],
+    stores: [],
     loading: false
   };
 
@@ -90,14 +92,20 @@
     $("#tableWrap").hidden = true;
     $("#emptyState").hidden = true;
     try {
-      const [postsResult, commentsResult] = await Promise.all([
+      const [postsResult, commentsResult, reviewsResult, storesResult] = await Promise.all([
         state.client.from("posts").select("*").order("created_at", { ascending: false }),
-        state.client.from("comments").select("*").order("created_at", { ascending: false })
+        state.client.from("comments").select("*").order("created_at", { ascending: false }),
+        state.client.from("store_reviews").select("*").order("created_at", { ascending: false }),
+        state.client.from("stores").select("id,name,status")
       ]);
       if (postsResult.error) throw postsResult.error;
       if (commentsResult.error) throw commentsResult.error;
+      if (reviewsResult.error) throw reviewsResult.error;
+      if (storesResult.error) throw storesResult.error;
       state.posts = postsResult.data || [];
       state.comments = commentsResult.data || [];
+      state.reviews = reviewsResult.data || [];
+      state.stores = storesResult.data || [];
       render();
     } catch (error) {
       $("#loading").textContent = error.message || "无法读取社区内容";
@@ -112,12 +120,13 @@
     $("#statPublished").textContent = state.posts.filter(item => item.status === "published").length;
     $("#statHidden").textContent = state.posts.filter(item => item.status === "hidden").length;
     $("#statComments").textContent = state.comments.length;
+    $("#statReviews").textContent = state.reviews.length;
   }
 
   function currentRows() {
     const query = $("#searchInput").value.trim().toLowerCase();
     const status = $("#statusFilter").value;
-    const rows = state.view === "posts" ? state.posts : state.comments;
+    const rows = state.view === "posts" ? state.posts : state.view === "comments" ? state.comments : state.reviews;
     return rows.filter(row => {
       if (status && row.status !== status) return false;
       if (!query) return true;
@@ -146,12 +155,16 @@
 
     $("#contentRows").innerHTML = rows.map(item => {
       const isPost = state.view === "posts";
-      const title = isPost ? item.title : truncate(item.body, 150);
+      const isReview = state.view === "reviews";
+      const title = isPost || isReview ? item.title : truncate(item.body, 150);
+      const storeName = state.stores.find(store => store.id === item.store_id)?.name || item.store_id;
       const context = isPost
         ? `${esc(item.community)} · ${state.comments.filter(comment => comment.post_id === item.id).length} 条评论`
-        : `评论于：${esc(postTitle(item.post_id))}`;
+        : isReview
+          ? `${esc(storeName)} · ${"★".repeat(Number(item.rating || 0))} ${esc(item.rating)}/5`
+          : `评论于：${esc(postTitle(item.post_id))}`;
       const status = item.status || "published";
-      const toggleLabel = status === "published" ? "隐藏" : "恢复";
+      const toggleLabel = status === "published" ? "隐藏" : status === "pending" ? "发布" : "恢复";
       const toggleClass = status === "published" ? "danger" : "success";
       const openLink = isPost
         ? `<a class="btn secondary small" href="https://lllaf.com/#/post/${encodeURIComponent(item.id)}" target="_blank" rel="noopener">查看</a>`
@@ -167,11 +180,11 @@
   }
 
   async function moderate(id, nextStatus) {
-    const table = state.view === "posts" ? "posts" : "comments";
-    const items = table === "posts" ? state.posts : state.comments;
+    const table = state.view === "posts" ? "posts" : state.view === "comments" ? "comments" : "store_reviews";
+    const items = table === "posts" ? state.posts : table === "comments" ? state.comments : state.reviews;
     const item = items.find(row => row.id === id);
     if (!item) return;
-    const action = nextStatus === "hidden" ? "隐藏" : "恢复";
+    const action = nextStatus === "hidden" ? "隐藏" : nextStatus === "published" ? "发布" : "恢复";
     if (!window.confirm(`确认${action}这条内容？`)) return;
     const { error } = await state.client.from(table).update({ status: nextStatus }).eq("id", id);
     if (error) {
@@ -212,6 +225,8 @@
       state.session = null;
       state.posts = [];
       state.comments = [];
+      state.reviews = [];
+      state.stores = [];
       showLogin();
     });
 

@@ -9,7 +9,7 @@
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
-  const state = { stores: [], products: [], ratings: [], query: "" };
+  const state = { stores: [], products: [], ratings: [], query: "", session: null, profile: null };
   const client = (CFG.supabaseUrl && CFG.supabaseAnonKey && window.supabase)
     ? window.supabase.createClient(CFG.supabaseUrl, CFG.supabaseAnonKey)
     : null;
@@ -26,6 +26,33 @@
   function price(value, currency) {
     if (value == null) return "Price not indexed";
     return new Intl.NumberFormat("en-US", { style: "currency", currency: currency || "USD" }).format(Number(value));
+  }
+
+  function toast(message) {
+    const element = $("#toast");
+    element.textContent = message;
+    element.classList.add("show");
+    clearTimeout(toast.timer);
+    toast.timer = setTimeout(() => element.classList.remove("show"), 2800);
+  }
+
+  function openReview(storeId) {
+    if (!state.session) {
+      window.location.href = "https://lllaf.com/#/";
+      return;
+    }
+    const store = state.stores.find(item => item.id === storeId);
+    if (!store) return;
+    $("#reviewStoreId").value = store.id;
+    $("#reviewStoreName").textContent = store.name;
+    $("#reviewProduct").innerHTML = '<option value="">Store experience</option>' + state.products
+      .filter(product => product.store_id === store.id)
+      .map(product => `<option value="${esc(product.id)}">${esc(product.name)}</option>`)
+      .join("");
+    $("#reviewError").hidden = true;
+    $("#reviewForm").reset();
+    $("#reviewStoreId").value = store.id;
+    $("#reviewDialog").showModal();
   }
 
   function render() {
@@ -63,6 +90,7 @@
         <div class="actions">
           <a class="btn primary" href="${esc(store.website_url)}" target="_blank" rel="sponsored noopener">Visit store ↗</a>
           <a class="btn secondary" href="https://lllaf.com/#/r/stores">Discuss this store</a>
+          ${state.session ? `<button class="btn secondary" data-review="${esc(store.id)}">Write a review</button>` : `<a class="btn secondary" href="https://lllaf.com/#/">Log in to review</a>`}
         </div>
       </article>`;
     }).join("");
@@ -86,6 +114,12 @@
       state.stores = storesResult.data || [];
       state.products = productsResult.data || [];
       state.ratings = ratingsResult.data || [];
+      const sessionResult = await client.auth.getSession();
+      state.session = sessionResult.data?.session || null;
+      if (state.session?.user) {
+        const profileResult = await client.from("profiles").select("username").eq("id", state.session.user.id).single();
+        state.profile = profileResult.data || null;
+      }
       $("#storeCount").textContent = state.stores.length;
       $("#productCount").textContent = state.products.length;
       $("#ratingCount").textContent = state.ratings.reduce((sum, item) => sum + Number(item.review_count || 0), 0);
@@ -99,6 +133,42 @@
     $("#storeSearch").addEventListener("input", event => {
       state.query = event.target.value;
       render();
+    });
+    $("#storeGrid").addEventListener("click", event => {
+      const button = event.target.closest("[data-review]");
+      if (button) openReview(button.dataset.review);
+    });
+    $("#cancelReview").addEventListener("click", () => $("#reviewDialog").close());
+    $("#reviewForm").addEventListener("submit", async event => {
+      event.preventDefault();
+      if (!state.session || !state.profile) {
+        $("#reviewError").textContent = "Please log in before submitting a review.";
+        $("#reviewError").hidden = false;
+        return;
+      }
+      const form = new FormData(event.currentTarget);
+      $("#reviewError").hidden = true;
+      $("#submitReview").disabled = true;
+      $("#submitReview").textContent = "Submitting…";
+      const result = await client.from("store_reviews").insert({
+        store_id: form.get("storeId"),
+        product_id: form.get("productId") || null,
+        user_id: state.session.user.id,
+        author_name: state.profile.username,
+        rating: Number(form.get("rating")),
+        title: String(form.get("title") || "").trim(),
+        body: String(form.get("body") || "").trim(),
+        status: "pending"
+      });
+      $("#submitReview").disabled = false;
+      $("#submitReview").textContent = "Submit for review";
+      if (result.error) {
+        $("#reviewError").textContent = result.error.message;
+        $("#reviewError").hidden = false;
+        return;
+      }
+      $("#reviewDialog").close();
+      toast("Review submitted for moderation");
     });
     load();
   });
