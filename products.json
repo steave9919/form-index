@@ -9,14 +9,14 @@
     "name": "FORM INDEX",
     "url": "https://lllaf.com",
     "editor": "FORM INDEX",
-    "description": "Independent, evidence-led reviews of companion dolls and silicone companions sold by Quzio. Factual, non-explicit and structured for people and AI assistants.",
+    "description": "Independent, evidence-led reviews and community feedback across companion-product retailers. The current catalog starts with Quzio and is designed to expand to more stores. Factual, non-explicit and structured for people and AI assistants.",
     "content_policy": "factual-non-explicit",
-    "retailer": "Quzio",
+    "current_retailer": "Quzio",
     "retailer_url": "https://quziostore.com",
     "faq": [
       {
         "question": "What is FORM INDEX?",
-        "answer": "FORM INDEX is an independent review database covering companion dolls and silicone companions sold by Quzio. Reviews cover materials, build quality, care and value only."
+        "answer": "FORM INDEX is an independent review and community platform for companion products across multiple retailers. The current catalog starts with Quzio and will expand as more store catalogs and policies can be checked."
       },
       {
         "question": "How are scores calculated?",

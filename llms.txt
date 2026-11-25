@@ -1,13 +1,13 @@
 # FORM INDEX
 
-FORM INDEX is an independent, evidence-led review database for companion dolls and silicone companions sold by Quzio (quziostore.com). Content is factual, non-explicit and structured for people and AI assistants.
+FORM INDEX is an independent, evidence-led review and community platform for companion products across multiple retailers. Current product coverage starts with Quzio (quziostore.com) and is designed to expand as more stores pass the catalog and policy checks. Content is factual, non-explicit and structured for people and AI assistants.
 
 > Use llms-full.txt for complete review content. This llms.txt is the site map and citation guide.
 
 ## Cite this site
 - Website: https://lllaf.com
 - Editor: FORM INDEX (independent reviews)
-- Retailer covered: Quzio (https://quziostore.com)
+- Current retailer coverage: Quzio (https://quziostore.com), with more retailers planned
 - Content policy: factual, non-explicit, source-labeled; editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests.
 
 ## Complete content (llms-full.txt)
@@ -19,6 +19,7 @@ FORM INDEX is an independent, evidence-led review database for companion dolls a
 
 ## Pages
 - Home / database: https://lllaf.com/
+- Retailer directory: https://lllaf.com/stores.html
 - Compare all products: https://lllaf.com/compare.html
 - Buying guide: https://lllaf.com/guide.html
 - Community buying questions: https://lllaf.com/guide.html#community

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FORM INDEX retailer directory: compare companion-product stores, product links, catalog checks and community ratings.">
+  <link rel="canonical" href="https://lllaf.com/stores.html">
+  <meta name="robots" content="index, follow">
+  <title>Companion Product Retailer Directory | FORM INDEX</title>
+  <script src="./config.js?v=20261125"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root{--bg:#f4f5f7;--panel:#fff;--ink:#181a1f;--muted:#6d737c;--line:#dfe3e8;--brand:#ff4500;--blue:#1677d2;--green:#147a51;--shadow:0 16px 45px rgba(25,27,31,.08)}
+    *{box-sizing:border-box}
+    [hidden]{display:none!important}
+    body{margin:0;background:radial-gradient(circle at 10% 0,#ffe8dc 0,transparent 27%),radial-gradient(circle at 90% 18%,#dcecff 0,transparent 26%),var(--bg);color:var(--ink);font:15px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--blue)}
+    button,input{font:inherit}
+    .nav{border-bottom:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.88);backdrop-filter:blur(14px);position:sticky;top:0;z-index:5}
+    .nav-inner{max-width:1120px;margin:auto;padding:13px 20px;display:flex;align-items:center;gap:20px}
+    .brand{font-weight:850;letter-spacing:-.04em;color:var(--ink);text-decoration:none;font-size:20px;display:flex;align-items:center;gap:9px}
+    .mark{width:32px;height:32px;border-radius:50%;background:var(--brand);color:white;display:grid;place-items:center;font-size:12px}
+    .nav-links{margin-left:auto;display:flex;gap:18px;font-size:13px}
+    .nav-links a{color:#3d434b;text-decoration:none;font-weight:650}
+    main{max-width:1120px;margin:auto;padding:48px 20px 60px}
+    .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);font-weight:850}
+    h1{font-size:clamp(32px,5vw,54px);line-height:1.02;letter-spacing:-.055em;max-width:780px;margin:8px 0 15px}
+    .lead{max-width:760px;color:var(--muted);font-size:17px;margin:0}
+    .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:28px 0 22px}
+    .search{flex:1;min-width:240px;max-width:440px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;outline:none}
+    .search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1677d219}
+    .legend{font-size:12px;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+    .stat{background:#ffffffa8;border:1px solid #ffffffcc;border-radius:12px;padding:15px 17px}
+    .stat b{display:block;font-size:25px;letter-spacing:-.04em}
+    .stat span{color:var(--muted);font-size:12px;font-weight:650}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .store{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:300px}
+    .store-top{display:flex;gap:13px;align-items:flex-start}
+    .store-avatar{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:#fff0ea;color:var(--brand);font-size:20px;font-weight:850;flex-shrink:0;border:1px solid #ffd7c7}
+    .store h2{font-size:20px;letter-spacing:-.025em;margin:0}
+    .domain{font-size:12px;color:var(--muted);margin-top:1px}
+    .verified{margin-left:auto;background:#e8f7ef;color:var(--green);font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.06em;border-radius:999px;padding:4px 8px;white-space:nowrap}
+    .description{color:#424851;font-size:14px;margin:15px 0 11px}
+    .metrics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .metric{border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:11px;color:#4c535d;background:#fafbfc}
+    .products{border-top:1px solid var(--line);margin-top:auto;padding-top:13px}
+    .products h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 7px}
+    .product-link{display:flex;justify-content:space-between;gap:10px;padding:5px 0;color:var(--ink);text-decoration:none;font-size:13px}
+    .product-link span:last-child{color:var(--muted)}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid transparent;border-radius:8px;padding:8px 12px;font-weight:750;font-size:12px}
+    .btn.primary{background:var(--blue);color:#fff}
+    .btn.secondary{background:#fff;border-color:var(--line);color:#343a42}
+    .policy{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+    .policy p{margin:0;color:var(--muted);font-size:13px;max-width:780px}
+    .policy strong{color:var(--ink)}
+    .loading,.empty{padding:48px 20px;text-align:center;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:12px}
+    footer{max-width:1120px;margin:0 auto;padding:0 20px 35px;color:var(--muted);font-size:12px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}.nav-links{display:none}.stats{grid-template-columns:1fr 1fr}.policy{grid-template-columns:1fr}h1{font-size:38px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="brand" href="./"><span class="mark">FI</span>formindex</a>
+    <div class="nav-links">
+      <a href="./">Community</a>
+      <a href="./compare.html">Reviews</a>
+      <a href="./guide.html">Buying guide</a>
+      <a href="./methodology.html">Methodology</a>
+    </div>
+  </div></nav>
+  <main>
+    <div class="eyebrow">18+ · Multi-retailer directory</div>
+    <h1>Compare where to buy, not only what to buy.</h1>
+    <p class="lead">FORM INDEX starts with Quzio and will add more companion-product retailers as their catalogs, shipping terms and policies can be checked. Paid placement does not create a listing or change a score.</p>
+    <div class="stats">
+      <div class="stat"><b id="storeCount">—</b><span>stores listed</span></div>
+      <div class="stat"><b id="productCount">—</b><span>products indexed</span></div>
+      <div class="stat"><b id="ratingCount">—</b><span>public store ratings</span></div>
+    </div>
+    <div class="bar">
+      <input class="search" id="storeSearch" type="search" placeholder="Search stores or product categories">
+      <span class="legend">Catalog data is checked against public store pages.</span>
+    </div>
+    <section class="grid" id="storeGrid" aria-live="polite"></section>
+    <div class="loading" id="loading">Loading retailer directory…</div>
+    <div class="empty" id="empty" hidden>No matching stores yet.</div>
+    <div class="policy">
+      <p><strong>How the directory stays useful:</strong> Store coverage is based on public product information and community demand. Commercial links are disclosed, but payment cannot buy a rating or remove criticism.</p>
+      <a class="btn secondary" href="./methodology.html">Read methodology</a>
+    </div>
+  </main>
+  <footer>FORM INDEX · Store directory · <a href="./llms.txt">AI data</a> · <a href="./guide.html#community">Community Q&amp;A</a></footer>
+  <script src="./stores.js"></script>
+</body>
+</html>
