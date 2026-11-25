@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Non-explicit QORMOS catalog review illustration</title>
+  <desc id="desc">An abstract geometric FORM INDEX illustration used in place of a retailer product photograph.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3f1eb"/>
+      <stop offset="1" stop-color="#e7e2d5"/>
+    </linearGradient>
+    <linearGradient id="form" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8e74f"/>
+      <stop offset="1" stop-color="#9ebc2a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="22" flood-color="#191916" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <circle cx="745" cy="208" r="92" fill="#f05b43" opacity=".9"/>
+  <circle cx="144" cy="930" r="58" fill="#1769aa" opacity=".18"/>
+  <path d="M210 1120h480l90 80H120z" fill="#d2ccbd"/>
+  <g filter="url(#shadow)">
+    <path d="M307 980c-26-116-12-224 36-316 32-61 31-128 13-187-12-39 4-78 38-99 26-17 58-13 82 7 35 29 53 71 48 115-4 40 7 76 33 109 54 68 74 176 43 371z" fill="url(#form)"/>
+    <path d="M356 760c20-68 58-106 113-116 50-9 101 12 138 58-19 74-43 143-72 207-77 10-148-33-179-149z" fill="#f3f1eb" opacity=".86"/>
+    <path d="M451 298v590" stroke="#191916" stroke-width="5" stroke-linecap="round" opacity=".28"/>
+  </g>
+  <text x="70" y="92" fill="#191916" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">QORMOS / CATALOG REVIEW</text>
+  <text x="70" y="1090" fill="#191916" font-family="Arial, sans-serif" font-size="50" font-weight="800" letter-spacing="-2">FORM INDEX</text>
+  <text x="70" y="1132" fill="#6c6a64" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">NON-EXPLICIT EDITORIAL VISUAL</text>
+</svg>

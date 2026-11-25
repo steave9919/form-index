@@ -73,7 +73,12 @@
       const rating = state.ratings.find(item => item.store_id === store.id) || {};
       const reviewCount = Number(rating.review_count || 0);
       const average = reviewCount ? Number(rating.average_rating).toFixed(1) : null;
-      const productLinks = products.slice(0, 5).map(product => `<a class="product-link" href="${esc(product.product_url)}" target="_blank" rel="sponsored noopener"><span>${esc(product.name)}</span><span>${esc(price(product.price_usd, product.currency))} ↗</span></a>`).join("");
+      const productLinks = products.slice(0, 5).map(product => {
+        const href = product.review_url || product.product_url;
+        const external = product.review_url ? "" : ' target="_blank" rel="sponsored noopener"';
+        const suffix = product.review_url ? "Review →" : `${price(product.price_usd, product.currency)} ↗`;
+        return `<a class="product-link" href="${esc(href)}"${external}><span>${esc(product.name)}</span><span>${esc(suffix)}</span></a>`;
+      }).join("");
       return `<article class="store">
         <div class="store-top">
           <div class="store-avatar">${esc((store.name || "S").charAt(0))}</div>
@@ -89,6 +94,7 @@
         <div class="products"><h3>Indexed products</h3>${productLinks || '<div class="legend">No products indexed yet.</div>'}</div>
         <div class="actions">
           <a class="btn primary" href="${esc(store.website_url)}" target="_blank" rel="sponsored noopener">Visit store ↗</a>
+          ${store.review_hub_url ? `<a class="btn secondary" href="${esc(store.review_hub_url)}">Read our review</a>` : ""}
           <a class="btn secondary" href="https://lllaf.com/#/r/stores">Discuss this store</a>
           ${state.session ? `<button class="btn secondary" data-review="${esc(store.id)}">Write a review</button>` : `<a class="btn secondary" href="https://lllaf.com/#/">Log in to review</a>`}
         </div>

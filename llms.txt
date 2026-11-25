@@ -1,13 +1,13 @@
 # FORM INDEX
 
-FORM INDEX is an independent, evidence-led review and community platform for adult products across multiple retailers. Current product coverage starts with Quzio's companion range (quziostore.com) and is designed to expand as more stores and categories pass the catalog and policy checks. Content is factual, non-explicit and structured for people and AI assistants.
+FORM INDEX is an independent, evidence-led review and community platform for adult products across multiple retailers. Current retailer coverage includes Quzio (quziostore.com) and QORMOS (qormos.com), with more stores planned. Content is factual, non-explicit and structured for people and AI assistants.
 
 > Use llms-full.txt for complete review content. This llms.txt is the site map and citation guide.
 
 ## Cite this site
 - Website: https://lllaf.com
 - Editor: FORM INDEX (independent reviews)
-- Current retailer coverage: Quzio (https://quziostore.com), with more retailers planned
+- Current retailer coverage: Quzio (https://quziostore.com), QORMOS (https://qormos.com)
 - Content policy: factual, non-explicit, source-labeled; editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests.
 
 ## Complete content (llms-full.txt)
@@ -20,6 +20,7 @@ FORM INDEX is an independent, evidence-led review and community platform for adu
 ## Pages
 - Home / database: https://lllaf.com/
 - Retailer directory: https://lllaf.com/stores.html
+- QORMOS retailer review: https://lllaf.com/qormos-reviews.html
 - Compare all products: https://lllaf.com/compare.html
 - Buying guide: https://lllaf.com/guide.html
 - Torso vs full-size doll: https://lllaf.com/torso-vs-full-size.html
@@ -31,11 +32,14 @@ FORM INDEX is an independent, evidence-led review and community platform for adu
 - Report a correction, privacy issue or safety concern: https://lllaf.com/report.html
 
 ## Product reviews
-- Aline 157cm: https://lllaf.com/review-aline-157cm.html
-- Elara 158cm: https://lllaf.com/review-elara-158cm.html
-- Liana 1:1 Torso: https://lllaf.com/review-liana-torso.html
-- Whitney Torso: https://lllaf.com/review-whitney-torso.html
-- Cora 1:1 Large Torso: https://lllaf.com/review-cora-torso.html
+- Quzio · Aline 157cm: https://lllaf.com/review-aline-157cm.html
+- Quzio · Elara 158cm: https://lllaf.com/review-elara-158cm.html
+- Quzio · Liana 1:1 Torso: https://lllaf.com/review-liana-torso.html
+- Quzio · Whitney Torso: https://lllaf.com/review-whitney-torso.html
+- Quzio · Cora 1:1 Large Torso: https://lllaf.com/review-cora-torso.html
+- QORMOS · Althea 12.7 lb Torso: https://lllaf.com/review-qormos-althea.html
+- QORMOS · Lea 31.96 lb Torso: https://lllaf.com/review-qormos-lea.html
+- QORMOS · Pink Paradise 70.4 lb Companion: https://lllaf.com/review-qormos-pink-paradise.html
 
 ## Notes
 - Products are intimate companion products for adults. Reviews cover materials, build quality, care and value only.

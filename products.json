@@ -9,14 +9,20 @@
     "name": "FORM INDEX",
     "url": "https://lllaf.com",
     "editor": "FORM INDEX",
-    "description": "Independent, evidence-led reviews and community feedback across adult-product retailers. The current catalog starts with Quzio and is designed to expand to more stores and categories. Factual, non-explicit and structured for people and AI assistants.",
+    "description": "Independent, evidence-led reviews and community feedback across adult-product retailers. Current coverage includes Quzio and QORMOS. Factual, non-explicit and structured for people and AI assistants.",
     "content_policy": "factual-non-explicit",
-    "current_retailer": "Quzio",
-    "retailer_url": "https://quziostore.com",
+    "current_retailers": [
+      "Quzio",
+      "QORMOS"
+    ],
+    "retailer_urls": {
+      "Quzio": "https://quziostore.com",
+      "QORMOS": "https://qormos.com"
+    },
     "faq": [
       {
         "question": "What is FORM INDEX?",
-        "answer": "FORM INDEX is an independent review and community platform for companion products across multiple retailers. The current catalog starts with Quzio and will expand as more store catalogs and policies can be checked."
+        "answer": "FORM INDEX is an independent review and community platform for companion products across multiple retailers. Current coverage includes Quzio and QORMOS."
       },
       {
         "question": "How are scores calculated?",
@@ -34,9 +40,11 @@
       "slug": "review-aline-157cm",
       "category": "doll",
       "brand": "Quzio",
+      "retailer": "Quzio",
       "name": "Aline 157cm",
       "price_usd": 499.99,
       "original_price_usd": 714.27,
+      "price_note": null,
       "editor_score": 8.7,
       "store_rating": 5,
       "review_count": 24,
@@ -92,9 +100,11 @@
       "slug": "review-elara-158cm",
       "category": "doll",
       "brand": "Quzio",
+      "retailer": "Quzio",
       "name": "Elara 158cm",
       "price_usd": 553.6,
       "original_price_usd": 719.68,
+      "price_note": null,
       "editor_score": 8.5,
       "store_rating": 5,
       "review_count": 24,
@@ -148,9 +158,11 @@
       "slug": "review-liana-torso",
       "category": "molded",
       "brand": "Quzio",
+      "retailer": "Quzio",
       "name": "Liana 1:1 Torso",
       "price_usd": 499.89,
       "original_price_usd": 649.86,
+      "price_note": null,
       "editor_score": 8.6,
       "store_rating": 5,
       "review_count": 24,
@@ -204,9 +216,11 @@
       "slug": "review-whitney-torso",
       "category": "molded",
       "brand": "Quzio",
+      "retailer": "Quzio",
       "name": "Whitney Torso",
       "price_usd": 472.3,
       "original_price_usd": 613.99,
+      "price_note": null,
       "editor_score": 8.4,
       "store_rating": 5,
       "review_count": 24,
@@ -260,9 +274,11 @@
       "slug": "review-cora-torso",
       "category": "molded",
       "brand": "Quzio",
+      "retailer": "Quzio",
       "name": "Cora 1:1 Large Torso",
       "price_usd": 683.2,
       "original_price_usd": 888.16,
+      "price_note": null,
       "editor_score": 8.3,
       "store_rating": 5,
       "review_count": 24,
@@ -309,6 +325,204 @@
       "review_url": "https://lllaf.com/review-cora-torso.html",
       "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/A4383d310925c4780a208e4c39810d3a2U.webp",
       "store_url": "https://quziostore.com/products/cora-silicone-1-1-large-realistic-sex-torso-real-skin-texture-18kg-39-68lbs-silicone-torso-sex-doll-jelly-boobs",
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
+    },
+    {
+      "id": "qormos-althea",
+      "slug": "review-qormos-althea",
+      "category": "molded",
+      "brand": "QORMOS",
+      "retailer": "QORMOS",
+      "name": "Althea 12.7 lb Torso",
+      "price_usd": 117.99,
+      "original_price_usd": 159.29,
+      "price_note": "Product page displayed $117.99 on November 25, 2026.",
+      "editor_score": 7.4,
+      "store_rating": null,
+      "review_count": null,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "verdict": "A low-cost 12.7 lb torso with dual channels and easy handling, held back by inconsistent material and warranty labeling.",
+      "best_for": "A price-sensitive first torso purchase when easy handling matters more than full-size presence.",
+      "pros": [
+        "Lowest current price in this QORMOS review set",
+        "12.7 lb is comparatively manageable for one person",
+        "Dual-channel construction",
+        "Clear published dimensions and channel lengths"
+      ],
+      "cons": [
+        "Material is labeled both TPR and Bio TPE",
+        "Warranty wording differs between the product page and homepage",
+        "The listing says the built-in torso is not enough to let it stand alone",
+        "Medical-grade and body-safe language is not independently verified"
+      ],
+      "specs": {
+        "Published weight": "12.7 lb",
+        "Published size": "13.77 × 8.07 in",
+        "Material label": "TPR in specifications; 'Bio TPE' elsewhere on the page",
+        "Channels": "Two textured channels; 6.7 in and 5.9 in published lengths",
+        "Waterproof claim": "100% waterproof / page also calls it fully submersible",
+        "Policy claim": "Product page says 30-day quality assurance; homepage advertises a 90-day quality warranty"
+      },
+      "faq": [
+        {
+          "question": "How much does the QORMOS Althea weigh?",
+          "answer": "The product page lists 12.7 lb. FORM INDEX has not independently weighed it."
+        },
+        {
+          "question": "Is Althea TPE or TPR?",
+          "answer": "The page uses both labels. Its specifications section says TPR, while the visual header says Bio TPE. Ask QORMOS to confirm the exact material before ordering."
+        },
+        {
+          "question": "Can the Althea stand on its own?",
+          "answer": "The page says the built-in torso improves stability but is not enough to let it stand alone."
+        },
+        {
+          "question": "Is the QORMOS Althea a full-size doll?",
+          "answer": "It is a compact torso, not a full-size head-and-limb companion. The published size is 13.77 × 8.07 in."
+        }
+      ],
+      "review": [
+        "Althea is the easiest product in this QORMOS set to plan around. At a published 12.7 lb, it is far lighter than the 32 lb Lea or 70.4 lb Pink Paradise. The roughly 14 × 8 inch footprint should make storage and drying easier for a buyer who does not want a large body taking over a room.",
+        "The product page is detailed about dimensions and channel lengths, which is useful. It is less consistent about material: one section calls it TPR, while branding elsewhere says Bio TPE. Those terms are not interchangeable in every buyer's mind, and the page does not provide a material certification. We would ask support to confirm the exact body material before ordering.",
+        "The homepage promises a 90-day quality warranty, while this product page says 30-day quality assurance. That may reflect different programs, but the buyer should treat the written product-page terms as the baseline until QORMOS confirms otherwise. The strengths are price and handling, not documentation consistency."
+      ],
+      "review_url": "https://lllaf.com/review-qormos-althea.html",
+      "image": "https://lllaf.com/qormos-product.svg",
+      "store_url": "https://qormos.com/products/qormos-12-7-lb-big-boobs-booty-upstanding-torso-doll-male-masturbator",
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
+    },
+    {
+      "id": "qormos-lea",
+      "slug": "review-qormos-lea",
+      "category": "molded",
+      "brand": "QORMOS",
+      "retailer": "QORMOS",
+      "name": "Lea 31.96 lb Torso",
+      "price_usd": null,
+      "original_price_usd": 580.49,
+      "price_note": "Homepage displayed $429.99; the product page rendered $0.00 at review time. Confirm the live variant price before ordering.",
+      "editor_score": 7.6,
+      "store_rating": null,
+      "review_count": null,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "verdict": "A credible middle-weight 1:1-scale torso with useful published weight, but the product page's $0.00 price makes checkout verification essential.",
+      "best_for": "Buyers who want substantial torso weight but still need a manageable single-item care routine.",
+      "pros": [
+        "Useful middle option between lightweight and 70 lb products",
+        "1:1-scale presence without full-body handling",
+        "Plain-package shipping claim",
+        "More realistic handling weight than the 12.7 lb Althea"
+      ],
+      "cons": [
+        "Product page rendered a $0.00 price",
+        "No independent material certification",
+        "At 31.96 lb, wet handling and thorough drying still need planning",
+        "Warranty and return wording should be confirmed for the selected market and order"
+      ],
+      "specs": {
+        "Published weight": "31.96 lb / 14.5 kg",
+        "Scale claim": "1:1 life-size torso",
+        "Material": "QORMOS describes it as Medical-Grade Bio-Sensation TPE",
+        "Channels": "Two channels; the feature list calls them smooth rather than textured",
+        "Waterproof claim": "100% waterproof / fully submersible",
+        "Price check": "Homepage $429.99; product page displayed $0.00 on November 25, 2026"
+      },
+      "faq": [
+        {
+          "question": "How heavy is the QORMOS Lea?",
+          "answer": "The public listing says 31.96 lb / 14.5 kg."
+        },
+        {
+          "question": "Why does the review show a price warning?",
+          "answer": "QORMOS displayed $429.99 on its homepage but $0.00 on the product page during the November 25, 2026 review check."
+        },
+        {
+          "question": "Is Lea a full-size doll?",
+          "answer": "The listing calls it a 1:1 life-size torso. It is not presented as a complete head-and-limb doll."
+        },
+        {
+          "question": "What material does QORMOS list for Lea?",
+          "answer": "The listing says Medical-Grade Bio-Sensation TPE. FORM INDEX has not independently verified that designation."
+        }
+      ],
+      "review": [
+        "Lea is the product we would shortlist for someone who finds a 12 lb torso too light but does not want to manage the 70.4 lb Pink Paradise. The published 31.96 lb / 14.5 kg weight gives it enough mass to stay supported during use while remaining in a different handling class from the largest model.",
+        "The 1:1-scale claim needs interpretation: Lea is a torso, not a complete body with a head and full limbs. Its value is concentrated in the torso proportions, width and rounded shape. QORMOS publishes the weight, but not a complete dimension set or a shipping-box size, so measure a storage and drying area before ordering.",
+        "The biggest problem is transactional rather than physical. QORMOS's homepage advertised Lea at $429.99, but the product page rendered $0.00 at the time of this check. We would not place the product record at a confirmed price until the live variant price is visible and consistent. That is enough to lower the confidence score even though the product concept is sensible."
+      ],
+      "review_url": "https://lllaf.com/review-qormos-lea.html",
+      "image": "https://lllaf.com/qormos-product.svg",
+      "store_url": "https://qormos.com/products/qormos-lea-1-1-life-size-private-chef-31-96lbs-14-5kg-wide-hips-rounded-buttocks-2-channels-sex-doll-torso",
+      "updated_at": "2026-11-25",
+      "published_at": "2026-11-23"
+    },
+    {
+      "id": "qormos-pink-paradise",
+      "slug": "review-qormos-pink-paradise",
+      "category": "molded",
+      "brand": "QORMOS",
+      "retailer": "QORMOS",
+      "name": "Pink Paradise 70.4 lb Companion",
+      "price_usd": 1006.24,
+      "original_price_usd": 1358.42,
+      "price_note": "Product page displayed $1,006.24 on November 25, 2026.",
+      "editor_score": 7.2,
+      "store_rating": null,
+      "review_count": null,
+      "evidence_level": "retailer",
+      "statement_type": "retailer_spec",
+      "verdict": "The high-mass option in this set, with strong visual presence but the greatest handling, drying and storage burden.",
+      "best_for": "Buyers with a permanent support location, help available for moving, and a realistic high-mass care routine.",
+      "pros": [
+        "Substantial 70.4 lb weight for buyers who prioritise mass and stability",
+        "Plump visual form and 1:1-scale claim",
+        "Dual-channel construction",
+        "Clear published channel lengths"
+      ],
+      "cons": [
+        "70.4 lb is a major moving and wet-handling burden",
+        "Material is labeled both TPR and Bio TPE",
+        "Overall dimensions and box size are not published",
+        "Highest price in this review set"
+      ],
+      "specs": {
+        "Published weight": "70.4 lb",
+        "Scale claim": "1:1 ratio",
+        "Material label": "TPR in specifications; 'Medical-Grade Bio-Sensation TPE' in the generic specification block",
+        "Channels": "Dual-entry claim; published lengths 7.08 in and 6.29 in",
+        "Waterproof claim": "100% waterproof / fully submersible",
+        "Missing planning data": "Overall dimensions and shipping-box size are not stated in the reviewed listing"
+      },
+      "faq": [
+        {
+          "question": "How heavy is QORMOS Pink Paradise?",
+          "answer": "The listing states 70.4 lb."
+        },
+        {
+          "question": "Is Pink Paradise suitable for one-person handling?",
+          "answer": "That depends on the person and the wet-handling route. At 70.4 lb, plan support and assistance if needed rather than assuming it can be carried easily."
+        },
+        {
+          "question": "Does the product page state the box size?",
+          "answer": "No overall body or shipping-box dimensions were found in the reviewed public specifications."
+        },
+        {
+          "question": "Is the material silicone?",
+          "answer": "The reviewed page does not clearly establish that. It uses TPR and Bio TPE terminology in different sections."
+        }
+      ],
+      "review": [
+        "Pink Paradise is not a casual upgrade from a compact torso. At 70.4 lb, moving it wet, turning it for drying and returning it to storage become the main ownership questions. The buyer needs a stable support surface, enough floor space and a plan for cleaning that does not require carrying the full weight across a room.",
+        "The published channel lengths and product weight are useful, but the listing does not state overall body dimensions or the shipping-box dimensions. That makes it difficult to check a doorway, storage cabinet or drying area in advance. We would not treat the 1:1 label as a complete space specification.",
+        "QORMOS also uses TPR in this product's specification list and Bio TPE in the generic specification block. Until the exact material is confirmed in writing, buyers should avoid assuming it supports the same cleaning or longevity expectations as a clearly documented silicone product. The visual concept is strong; the documentation and handling burden keep the score lower."
+      ],
+      "review_url": "https://lllaf.com/review-qormos-pink-paradise.html",
+      "image": "https://lllaf.com/qormos-product.svg",
+      "store_url": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast",
       "updated_at": "2026-11-25",
       "published_at": "2026-11-23"
     }

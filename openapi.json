@@ -113,23 +113,57 @@
           "brand": {
             "type": "string"
           },
+          "retailer": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
           "price_usd": {
-            "type": "number"
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "original_price_usd": {
             "type": "number"
+          },
+          "price_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "editor_score": {
             "type": "number"
           },
           "store_rating": {
-            "type": "number"
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "review_count": {
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "evidence_level": {
             "type": "string"
