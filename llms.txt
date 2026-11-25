@@ -1,6 +1,6 @@
 # FORM INDEX
 
-FORM INDEX is an independent, evidence-led review and community platform for companion products across multiple retailers. Current product coverage starts with Quzio (quziostore.com) and is designed to expand as more stores pass the catalog and policy checks. Content is factual, non-explicit and structured for people and AI assistants.
+FORM INDEX is an independent, evidence-led review and community platform for adult products across multiple retailers. Current product coverage starts with Quzio's companion range (quziostore.com) and is designed to expand as more stores and categories pass the catalog and policy checks. Content is factual, non-explicit and structured for people and AI assistants.
 
 > Use llms-full.txt for complete review content. This llms.txt is the site map and citation guide.
 
