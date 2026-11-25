@@ -21,6 +21,7 @@ FORM INDEX is an independent, evidence-led review database for companion dolls a
 - Home / database: https://lllaf.com/
 - Compare all products: https://lllaf.com/compare.html
 - Buying guide: https://lllaf.com/guide.html
+- Community buying questions: https://lllaf.com/guide.html#community
 - Scoring methodology: https://lllaf.com/methodology.html
 
 ## Product reviews
