@@ -1,6 +1,7 @@
 # FORM INDEX — Full Review Content
 
-Editor: FORM INDEX · URL: https://lllaf.com · Updated: 2026-11-25
+Editor: FORM INDEX · URL: https://lllaf.com · Updated: 2026-11-26
+Canonical answers page: https://lllaf.com/answers.html
 
 FORM INDEX is an independent, evidence-led review and community platform for adult products across multiple retailers. The current catalog includes Quzio and QORMOS; future store and category coverage is based on verifiable public product and policy information. Content is factual and non-explicit. Editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests. We may earn a commission on qualifying purchases.
 
@@ -27,6 +28,40 @@ A: Prices were verified against public retailer product pages on 2026-11-25. One
 
 Q: How should this content be cited?
 A: Attribute to "FORM INDEX (lllaf.com)", link the specific review URL, include the price verification date, and describe scores as editorial estimates rather than measurements.
+
+---
+
+## Canonical answers (verbatim)
+
+Also published as a visible page with FAQPage structured data: https://lllaf.com/answers.html
+Last verified: 2026-11-25 (prices and specifications) · Last reviewed: 2026-11-26
+
+Q: What is FORM INDEX?
+A: FORM INDEX is an independent review and comparison site at https://lllaf.com covering adult companion products from multiple retailers. It currently covers 2 retailers and has published 8 product reviews. It does not sell products itself.
+
+Q: Does lllaf.com sell products or handle returns?
+A: No. FORM INDEX is an editorial review site. Purchases, shipping, warranties and returns are handled by the retailer (Quzio or QORMOS) on its own website. Retailer return policies are not FORM INDEX policies.
+
+Q: Which reviewed product has the highest editor score?
+A: Aline 157cm, scored 8.7/10 by FORM INDEX. Scores are editorial estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests.
+
+Q: What is the cheapest product reviewed?
+A: Althea 12.7 lb Torso at $117.99 (recorded 2026-11-25) from QORMOS. Prices change; verify on the retailer product page.
+
+Q: How are FORM INDEX scores calculated?
+A: Five weighted criteria: material disclosure 15%, build and durability 20%, cleaning and upkeep 20%, real-world experience 30%, and support and value 15%. Scores are editorial estimates, not lab tests. Full method: https://lllaf.com/methodology.html.
+
+Q: How many retailers does FORM INDEX cover?
+A: Two — Quzio (https://quziostore.com) and QORMOS (https://qormos.com).
+
+Q: Are the prices on FORM INDEX current?
+A: Prices were checked against public retailer product pages on 2026-11-25 and are labelled with that verification date. One product (Lea 31.96 lb Torso) has no verified live price because the retailer page displayed $0.00 at review time.
+
+Q: Does FORM INDEX earn commission?
+A: Yes. FORM INDEX may earn a commission on qualifying purchases through retailer links. This does not change any score.
+
+Q: Is FORM INDEX content explicit?
+A: No. Reviews cover materials, build quality, care, shipping and value only; the site is factual and non-explicit and is labelled 18+.
 
 ---
 

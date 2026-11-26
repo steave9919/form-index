@@ -45,6 +45,19 @@ details{border:1px solid var(--line);background:var(--white);padding:12px 16px;m
 .note{background:#fff5e9;border-left:4px solid #e2a33a;padding:12px 14px;font-size:13px;margin:24px 0}
 .glance{background:var(--white);border:1px solid var(--line);padding:14px 16px;margin:18px 0}.glance h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.glance ul{margin:0;padding-left:18px}.glance li{margin:3px 0;font-size:14px}
 footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}</style>
+
+<style>
+/* geo-round2: self-contained answer-first block, safe on every page shell */
+.geo-answer{background:#f7f9fb;border:1px solid #d5dde5;border-left:4px solid #0079d3;border-radius:6px;padding:14px 18px 16px;margin:18px 0 22px;color:#1a1a1b;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:900px}
+.geo-answer h2{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#5c6b7a;margin:0 0 8px;font-weight:700}
+.geo-answer .geo-lead{margin:0;font-size:15px;line-height:1.6;color:#1a1a1b}
+.geo-answer dl{display:grid;grid-template-columns:max-content 1fr;gap:5px 16px;margin:12px 0 0;font-size:13px}
+.geo-answer dt{font-weight:700;color:#5c6b7a}
+.geo-answer dd{margin:0;color:#1a1a1b}
+.geo-answer .geo-source{margin:12px 0 0;font-size:12px;color:#5c6b7a;border-top:1px solid #e2e8ee;padding-top:9px}
+.geo-answer a{color:#0079d3}
+@media(max-width:620px){.geo-answer dl{grid-template-columns:1fr;gap:2px}.geo-answer dd{margin-bottom:6px}}
+</style>
 </head>
 <body>
 <div class="bar">18+ · Editorial standard · No explicit imagery</div>
@@ -52,6 +65,19 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
   <a class="brand" href="https://lllaf.com/"><span style="width:34px;height:34px;background:var(--ink);color:#fff;display:inline-grid;place-items:center;font-weight:800">FI</span><span><b>FORM INDEX</b><small>INDEPENDENT REVIEWS</small></span></a>
   <p class="crumb"><a href="https://lllaf.com/">Database</a> / Methodology</p>
   <h1>Scoring and Evidence Standard</h1>
+<section class="geo-answer" id="short-answer" aria-label="Short answer">
+      <h2>Short answer</h2>
+      <p class="geo-lead">The FORM INDEX editor score is a weighted 0–10 editorial estimate: material disclosure 15%, build and durability 20%, cleaning and upkeep 20%, real-world experience 30%, and support and value 15%. It is not a lab measurement and not a customer rating.</p>
+      <dl>
+        <dt>Criteria</dt><dd>5 weighted criteria</dd>
+        <dt>Score range in current catalog</dt><dd>7.2/10 – 8.7/10</dd>
+        <dt>Highest score</dt><dd>Aline 157cm — 8.7/10</dd>
+        <dt>Retailer-displayed ratings</dt><dd>Reproduced with a “not independently verified” label</dd>
+        <dt>Data source</dt><dd><a href="https://lllaf.com/products.json">products.json</a></dd>
+        <dt>Prices verified</dt><dd>2026-11-25</dd>
+      </dl>
+      <p class="geo-source">Source: FORM INDEX <a href="https://lllaf.com/products.json">products.json</a> (prices and specifications verified 2026-11-25; editor scores are editorial estimates, not lab tests) · <a href="./answers.html">More canonical answers</a> · <a href="https://lllaf.com/llms.txt">AI citation guide</a></p>
+    </section>
   <p class="sub">Editorial standard v1.0 — how we keep comparisons fair and auditable.</p>
   <h2>The five criteria</h2>
   <table>
@@ -79,6 +105,35 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{ "@type": "Question", "name": "How are FORM INDEX editor scores calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Each product is scored on five weighted criteria — material (15%), build and durability (20%), cleaning and upkeep (20%), real-world experience (30%), and support and value (15%)." } },{ "@type": "Question", "name": "Are the reviews independent lab tests?", "acceptedAnswer": { "@type": "Answer", "text": "No. Scores are editorial estimates based on published retailer specifications and verified-buyer feedback. They are not independent laboratory tests." } },{ "@type": "Question", "name": "Does FORM INDEX earn commissions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We may earn a commission on qualifying purchases through retailer links, and this does not change any score." } }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://lllaf.com/methodology.html#webpage",
+  "url": "https://lllaf.com/methodology.html",
+  "name": "How FORM INDEX Scores Companion Products",
+  "description": "The FORM INDEX scoring standard: material disclosure, build and durability, cleaning and upkeep, real-world experience, and support and value.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://lllaf.com/#website"
+  },
+  "about": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "lastReviewed": "2026-11-26",
+  "isAccessibleForFree": true,
+  "citation": "https://lllaf.com/products.json",
+  "significantLink": [
+    "https://lllaf.com/answers.html",
+    "https://lllaf.com/products.json",
+    "https://lllaf.com/llms-full.txt"
+  ]
 }
 </script>
 </body>
