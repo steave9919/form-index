@@ -44,7 +44,14 @@ ul,ol{margin:10px 0;padding-left:20px}li{margin:5px 0}
 details{border:1px solid var(--line);background:var(--white);padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);margin:8px 0 0}
 .note{background:#fff5e9;border-left:4px solid #e2a33a;padding:12px 14px;font-size:13px;margin:24px 0}
 .glance{background:var(--white);border:1px solid var(--line);padding:14px 16px;margin:18px 0}.glance h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.glance ul{margin:0;padding-left:18px}.glance li{margin:3px 0;font-size:14px}
-footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}</style>
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}
+#short-answer dl{display:grid;grid-template-columns:135px 1fr;gap:6px 12px;margin:10px 0;font-size:13px}
+#short-answer dt{color:var(--muted);font-weight:600}
+#short-answer dd{margin:0}
+#short-answer p{margin:6px 0}
+@media(max-width:680px){#short-answer dl{grid-template-columns:1fr;gap:2px}}
+
+</style>
 </head>
 <body>
 <div class="bar">18+ · Companion product review · No explicit imagery</div>
@@ -66,6 +73,19 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
     </div>
   </div>
 
+  <section class="glance" id="short-answer" aria-labelledby="short-answer-title">
+    <h3 id="short-answer-title">Short answer</h3>
+    <p><strong>Pink Paradise 70.4 lb Companion</strong>: The high-mass option in this set, with strong visual presence but the greatest handling, drying and storage burden. FORM INDEX scores it <strong>7.2/10</strong> and recorded a price of <strong>$1,006.24</strong> at QORMOS, last verified 2026-11-25.</p>
+    <dl>
+      <dt>Product</dt><dd>Pink Paradise 70.4 lb Companion (Heavy TPR companion · QORMOS)</dd>
+      <dt>Price (USD)</dt><dd>$1,006.24 (previously $1,358.42)</dd>
+      <dt>Editor score</dt><dd>7.2/10 · editorial estimate, not a lab test</dd>
+      <dt>Best for</dt><dd>Buyers with a permanent support location, help available for moving, and a realistic high-mass care routine.</dd>
+      <dt>Evidence</dt><dd>Retailer product specifications · <a href="https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast" rel="sponsored noopener" target="_blank">primary source</a></dd>
+      <dt>Last verified</dt><dd><time datetime="2026-11-25">2026-11-25</time></dd>
+    </dl>
+    <p class="sub">FORM INDEX is an independent review publisher, not a retailer: it does not sell, ship or accept returns for this product. Purchases are completed on QORMOS's website. <a href="https://lllaf.com/methodology.html">How we score</a> · <a href="https://lllaf.com/report.html">Report a correction</a> · <a href="https://lllaf.com/llms.txt">Cite this site</a>.</p>
+  </section>
   <div class="glance"><h3>At a glance</h3><ul><li><strong>Published weight:</strong> 70.4 lb</li><li><strong>Scale claim:</strong> 1:1 ratio</li><li><strong>Material label:</strong> TPR in specifications; 'Medical-Grade Bio-Sensation TPE' in the generic specification block</li><li><strong>Channels:</strong> Dual-entry claim; published lengths 7.08 in and 6.29 in</li></ul></div>
 
   <h2>Specifications</h2>
@@ -88,21 +108,63 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@id": "https://lllaf.com/review-qormos-pink-paradise.html#product",
   "@type": "Product",
   "name": "Pink Paradise 70.4 lb Companion",
   "description": "The high-mass option in this set, with strong visual presence but the greatest handling, drying and storage burden.",
   "image": "https://lllaf.com/qormos-product.svg",
-  "brand": { "@type": "Brand", "name": "QORMOS" },
-  "offers": { "@type": "Offer", "url": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast", "priceCurrency": "USD", "price": "1006.24", "availability": "https://schema.org/InStock" },
-  
+  "brand": {
+    "@type": "Brand",
+    "name": "QORMOS"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast",
+    "priceCurrency": "USD",
+    "price": "1006.24",
+    "availability": "https://schema.org/InStock"
+  },
   "review": {
     "@type": "Review",
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#review",
     "name": "Pink Paradise 70.4 lb Companion Review: Specs, Scores & Verdict (2026)",
     "reviewBody": "Pink Paradise is not a casual upgrade from a compact torso. At 70.4 lb, moving it wet, turning it for drying and returning it to storage become the main ownership questions. The buyer needs a stable support surface, enough floor space and a plan for cleaning that does not require carrying the full weight across a room. The published channel lengths and product weight are useful, but the listing does not state overall body dimensions or the shipping-box dimensions. That makes it difficult to check a doorway, storage cabinet or drying area in advance. We would not treat the 1:1 label as a complete space specification. QORMOS also uses TPR in this product's specification list and Bio TPE in the generic specification block. Until the exact material is confirmed in writing, buyers should avoid assuming it supports the same cleaning or longevity expectations as a clearly documented silicone product. The visual concept is strong; the documentation and handling burden keep the score lower.",
     "datePublished": "2026-11-25",
     "dateModified": "2026-11-25",
-    "reviewRating": { "@type": "Rating", "ratingValue": 7.2, "bestRating": "10" },
-    "author": { "@type": "Organization", "name": "FORM INDEX", "url": "https://lllaf.com" }
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 7.2,
+      "bestRating": "10"
+    },
+    "author": {
+      "@id": "https://lllaf.com/#organization"
+    },
+    "itemReviewed": {
+      "@id": "https://lllaf.com/review-qormos-pink-paradise.html#product"
+    },
+    "url": "https://lllaf.com/review-qormos-pink-paradise.html",
+    "inLanguage": "en",
+    "isBasedOn": {
+      "@type": "CreativeWork",
+      "url": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast",
+      "name": "Retailer product page"
+    },
+    "publisher": {
+      "@id": "https://lllaf.com/#organization"
+    }
+  },
+  "mainEntityOfPage": {
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#webpage"
+  },
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Retailer product page for Pink Paradise 70.4 lb Companion",
+    "url": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast"
+  },
+  "subjectOf": {
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#review"
   }
 }
 </script>
@@ -111,8 +173,18 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Database", "item": "https://lllaf.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Pink Paradise 70.4 lb Companion", "item": "https://lllaf.com/review-qormos-pink-paradise.html" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Database",
+      "item": "https://lllaf.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pink Paradise 70.4 lb Companion",
+      "item": "https://lllaf.com/review-qormos-pink-paradise.html"
+    }
   ]
 }
 </script>
@@ -120,7 +192,85 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{ "@type": "Question", "name": "How heavy is QORMOS Pink Paradise?", "acceptedAnswer": { "@type": "Answer", "text": "The listing states 70.4 lb." } },{ "@type": "Question", "name": "Is Pink Paradise suitable for one-person handling?", "acceptedAnswer": { "@type": "Answer", "text": "That depends on the person and the wet-handling route. At 70.4 lb, plan support and assistance if needed rather than assuming it can be carried easily." } },{ "@type": "Question", "name": "Does the product page state the box size?", "acceptedAnswer": { "@type": "Answer", "text": "No overall body or shipping-box dimensions were found in the reviewed public specifications." } },{ "@type": "Question", "name": "Is the material silicone?", "acceptedAnswer": { "@type": "Answer", "text": "The reviewed page does not clearly establish that. It uses TPR and Bio TPE terminology in different sections." } }]
+  "@id": "https://lllaf.com/review-qormos-pink-paradise.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How heavy is QORMOS Pink Paradise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The listing states 70.4 lb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Pink Paradise suitable for one-person handling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That depends on the person and the wet-handling route. At 70.4 lb, plan support and assistance if needed rather than assuming it can be carried easily."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the product page state the box size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No overall body or shipping-box dimensions were found in the reviewed public specifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the material silicone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The reviewed page does not clearly establish that. It uses TPR and Bio TPE terminology in different sections."
+      }
+    }
+  ],
+  "inLanguage": "en",
+  "about": {
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#product"
+  },
+  "isPartOf": {
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#webpage"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://lllaf.com/review-qormos-pink-paradise.html#webpage",
+  "url": "https://lllaf.com/review-qormos-pink-paradise.html",
+  "name": "Pink Paradise 70.4 lb Companion Review — FORM INDEX",
+  "description": "Independent FORM INDEX review of the Pink Paradise 70.4 lb Companion sold by QORMOS, with recorded price, editor score, specifications and care guidance.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://lllaf.com/#website"
+  },
+  "about": {
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#product"
+  },
+  "mainEntity": {
+    "@id": "https://lllaf.com/review-qormos-pink-paradise.html#product"
+  },
+  "publisher": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "reviewedBy": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "lastReviewed": "2026-11-25",
+  "isAccessibleForFree": true,
+  "citation": {
+    "@type": "CreativeWork",
+    "url": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast",
+    "name": "Retailer product page (primary source)"
+  },
+  "significantLink": "https://qormos.com/products/qormos-pinkparadise-alluring-true-to-life-doll-with-plump-breast"
 }
 </script>
 </body>

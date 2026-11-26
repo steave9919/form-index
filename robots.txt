@@ -1,4 +1,62 @@
+# FORM INDEX / lllaf.com — crawler policy
+# Updated: 2026-11-26
+#
+# Retrieval and citation crawlers (the ones that surface answers with links)
+# are explicitly welcome. Training-only crawlers are intentionally NOT given
+# a dedicated rule here, so their treatment stays as before (User-agent: *).
+# The admin front-end is excluded from every group: it is a private tool,
+# carries no editorial content, and is already marked noindex/nofollow.
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
+
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /admin.js
 
+# Machine-readable entry points for AI assistants:
+#   https://lllaf.com/llms.txt        site map + citation rules
+#   https://lllaf.com/answers.html    visible canonical answers (FAQPage)
+#   https://lllaf.com/llms-full.txt   full review corpus in plain text
+#   https://lllaf.com/products.json   structured product / price / score dataset
+#   https://lllaf.com/openapi.json    API contract
+#   https://lllaf.com/sitemap.xml     canonical URL index
 Sitemap: https://lllaf.com/sitemap.xml

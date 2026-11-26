@@ -70,6 +70,19 @@
     footer{max-width:1120px;margin:0 auto;padding:0 20px 35px;color:var(--muted);font-size:12px}
     @media(max-width:760px){.grid{grid-template-columns:1fr}.nav-links{display:none}.stats{grid-template-columns:1fr 1fr}.policy{grid-template-columns:1fr}h1{font-size:38px}}
   </style>
+
+<style>
+/* geo-round2: self-contained answer-first block, safe on every page shell */
+.geo-answer{background:#f7f9fb;border:1px solid #d5dde5;border-left:4px solid #0079d3;border-radius:6px;padding:14px 18px 16px;margin:18px 0 22px;color:#1a1a1b;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:900px}
+.geo-answer h2{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#5c6b7a;margin:0 0 8px;font-weight:700}
+.geo-answer .geo-lead{margin:0;font-size:15px;line-height:1.6;color:#1a1a1b}
+.geo-answer dl{display:grid;grid-template-columns:max-content 1fr;gap:5px 16px;margin:12px 0 0;font-size:13px}
+.geo-answer dt{font-weight:700;color:#5c6b7a}
+.geo-answer dd{margin:0;color:#1a1a1b}
+.geo-answer .geo-source{margin:12px 0 0;font-size:12px;color:#5c6b7a;border-top:1px solid #e2e8ee;padding-top:9px}
+.geo-answer a{color:#0079d3}
+@media(max-width:620px){.geo-answer dl{grid-template-columns:1fr;gap:2px}.geo-answer dd{margin-bottom:6px}}
+</style>
 </head>
 <body>
   <nav class="nav"><div class="nav-inner">
@@ -84,6 +97,19 @@
   <main>
     <div class="eyebrow">18+ · Multi-retailer directory</div>
     <h1>Compare where to buy, not only what to buy.</h1>
+<section class="geo-answer" id="short-answer" aria-label="Short answer">
+      <h2>Short answer</h2>
+      <p class="geo-lead">FORM INDEX currently indexes 2 retailers: Quzio (5 reviewed products) and QORMOS (3 reviewed products). FORM INDEX is a review publisher, not a seller — purchases, shipping, warranties and returns are handled by the retailer on its own website.</p>
+      <dl>
+        <dt>Retailers indexed</dt><dd>2 — Quzio, QORMOS</dd>
+        <dt>Quzio products reviewed</dt><dd>5</dd>
+        <dt>QORMOS products reviewed</dt><dd>3</dd>
+        <dt>Paid placement</dt><dd>Does not create a listing or change a score</dd>
+        <dt>FORM INDEX sells products</dt><dd>No</dd>
+        <dt>Prices verified</dt><dd>2026-11-25</dd>
+      </dl>
+      <p class="geo-source">Source: FORM INDEX <a href="https://lllaf.com/products.json">products.json</a> (prices and specifications verified 2026-11-25; editor scores are editorial estimates, not lab tests) · <a href="./answers.html">More canonical answers</a> · <a href="https://lllaf.com/llms.txt">AI citation guide</a></p>
+    </section>
     <p class="lead">FORM INDEX currently indexes Quzio and QORMOS, and will add more adult-product retailers as their catalogs, shipping terms and policies can be checked. Paid placement does not create a listing or change a score.</p>
     <div class="stats">
       <div class="stat"><b id="storeCount">—</b><span>stores listed</span></div>
@@ -135,5 +161,34 @@
   <footer>FORM INDEX · <a href="./about.html">About</a> · <a href="./community-guidelines.html">Rules</a> · <a href="./privacy.html">Privacy</a> · <a href="./report.html">Report</a> · <a href="./llms.txt">AI data</a> · <a href="./guide.html#community">Community Q&amp;A</a></footer>
   <div class="toast" id="toast" role="status"></div>
   <script src="./stores.js?v=20261125qormos"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://lllaf.com/stores.html#webpage",
+  "url": "https://lllaf.com/stores.html",
+  "name": "Companion Product Retailer Directory | FORM INDEX",
+  "description": "FORM INDEX retailer directory: compare adult-product stores, product links, catalog checks and community ratings.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://lllaf.com/#website"
+  },
+  "about": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "lastReviewed": "2026-11-26",
+  "isAccessibleForFree": true,
+  "citation": "https://lllaf.com/products.json",
+  "significantLink": [
+    "https://lllaf.com/answers.html",
+    "https://lllaf.com/products.json",
+    "https://lllaf.com/llms-full.txt"
+  ]
+}
+</script>
 </body>
 </html>

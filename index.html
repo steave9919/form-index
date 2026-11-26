@@ -181,24 +181,144 @@ button{font-family:inherit;cursor:pointer}
     <script src="./config.js?v=20261125"></script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "FORM INDEX",
-      "url": "https://lllaf.com/",
-      "description": "Multi-retailer community for adult-product reviews, store comparisons, care guides and owner feedback. Factual and non-explicit.",
-      "inLanguage": "en",
-      "publisher": { "@type": "Organization", "name": "FORM INDEX", "url": "https://lllaf.com/" }
-    }
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://lllaf.com/#website",
+  "name": "FORM INDEX",
+  "url": "https://lllaf.com/",
+  "description": "Multi-retailer community for adult-product reviews, store comparisons, care guides and owner feedback. Factual and non-explicit.",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "about": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "hasPart": {
+    "@id": "https://lllaf.com/#review-index"
+  },
+  "subjectOf": {
+    "@type": "CreativeWork",
+    "@id": "https://lllaf.com/llms.txt",
+    "url": "https://lllaf.com/llms.txt",
+    "name": "FORM INDEX llms.txt — AI citation guide"
+  },
+  "dateModified": "2026-11-26"
+}
     </script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "FORM INDEX",
-      "url": "https://lllaf.com/",
-      "description": "Community-driven reviews across adult-product retailers. Coverage focuses on materials, build quality, care, shipping and value.",
-      "sameAs": ["https://lllaf.com/llms.txt"]
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://lllaf.com/#organization",
+  "name": "FORM INDEX",
+  "url": "https://lllaf.com/",
+  "description": "Community-driven reviews across adult-product retailers. Coverage focuses on materials, build quality, care, shipping and value.",
+  "disambiguatingDescription": "FORM INDEX is an independent editorial review site. It is not a retailer or merchant: it does not sell products, take payment, fulfil orders or operate a returns policy. Purchases happen on the retailer's website.",
+  "knowsAbout": [
+    "companion dolls",
+    "silicone and TPE companion products",
+    "adult product care and storage",
+    "retailer specification comparison",
+    "discreet shipping and retailer policies"
+  ],
+  "publishingPrinciples": "https://lllaf.com/methodology.html",
+  "actionableFeedbackPolicy": "https://lllaf.com/report.html",
+  "subjectOf": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://lllaf.com/llms.txt",
+      "name": "FORM INDEX AI citation guide"
+    },
+    {
+      "@id": "https://lllaf.com/#product-dataset"
     }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://lllaf.com/#review-index",
+  "name": "FORM INDEX product reviews",
+  "description": "All 8 published product reviews, ordered from highest to lowest editor score.",
+  "numberOfItems": 8,
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "inLanguage": "en",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aline 157cm",
+      "url": "https://lllaf.com/review-aline-157cm.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Liana 1:1 Torso",
+      "url": "https://lllaf.com/review-liana-torso.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Elara 158cm",
+      "url": "https://lllaf.com/review-elara-158cm.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Whitney Torso",
+      "url": "https://lllaf.com/review-whitney-torso.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Cora 1:1 Large Torso",
+      "url": "https://lllaf.com/review-cora-torso.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Lea 31.96 lb Torso",
+      "url": "https://lllaf.com/review-qormos-lea.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Althea 12.7 lb Torso",
+      "url": "https://lllaf.com/review-qormos-althea.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Pink Paradise 70.4 lb Companion",
+      "url": "https://lllaf.com/review-qormos-pink-paradise.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://lllaf.com/#product-dataset",
+  "name": "FORM INDEX product review dataset",
+  "description": "Machine-readable specifications, recorded prices, editorial scores, verdicts, evidence levels and FAQs for all 8 reviewed products.",
+  "url": "https://lllaf.com/products.json",
+  "creator": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "dateModified": "2026-11-25",
+  "temporalCoverage": "2026-11-23/2026-11-25",
+  "encodingFormat": "application/json",
+  "isAccessibleForFree": true,
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://lllaf.com/products.json"
+  }
+}
     </script>
   </head>
   <body>
@@ -213,7 +333,7 @@ button{font-family:inherit;cursor:pointer}
         <li><a href="./review-cora-torso.html">Cora 1:1 Large Torso Review</a> — silicone companion, $683.20, editor score 8.3/10.</li>
       </ul>
       <p><a href="./stores.html">Retailer directory</a> · <a href="./compare.html">Compare all products</a> · <a href="./guide.html">Buying guide</a> · <a href="./methodology.html">Scoring methodology</a></p>
-      <p>Editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests. We may earn a commission on qualifying purchases through retailer links.</p>
+      <p>Editorial scores are estimates based on published retailer specifications and verified-buyer feedback, not independent lab tests. We may earn a commission on qualifying purchases through retailer links. FORM INDEX is a review publisher, not a retailer: it does not sell, ship or accept returns for any product. Prices were last verified on 2026-11-25. FORM INDEX is a review publisher, not a retailer: it does not sell, ship or accept returns for any product. Prices were last verified on 2026-11-25.</p>
     </noscript>
 
     <header class="topbar">
@@ -300,6 +420,7 @@ button{font-family:inherit;cursor:pointer}
         <a href="./report.html">Report content or privacy issue</a>
         <a href="./methodology.html">Scoring method</a>
         <a href="./llms.txt">AI data</a>
+        <a href="./answers.html">Canonical answers</a>
       </div>
       FACTUAL AND NON-EXPLICIT · 18+ COMMUNITY · WE MAY EARN A COMMISSION ON QUALIFYING RETAILER LINKS
     </footer>
