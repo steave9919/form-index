@@ -1,4 +1,42 @@
+# FORM INDEX / lllaf.com — crawler policy
+# Updated: 2026-11-26
+#
+# Retrieval and citation crawlers (the ones that surface answers with links)
+# are explicitly welcome. Training-only crawlers are intentionally NOT given
+# a dedicated rule here, so their treatment stays exactly as it was before
+# this change (governed by the User-agent: * group below).
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: *
 Allow: /
 
+# Machine-readable entry points for AI assistants:
+#   https://lllaf.com/llms.txt        site map + canonical answers + citation rules
+#   https://lllaf.com/llms-full.txt   full review corpus in plain text
+#   https://lllaf.com/products.json   structured product / price / score dataset
+#   https://lllaf.com/openapi.json    API contract
+#   https://lllaf.com/sitemap.xml     canonical URL index
 Sitemap: https://lllaf.com/sitemap.xml

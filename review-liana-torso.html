@@ -44,7 +44,14 @@ ul,ol{margin:10px 0;padding-left:20px}li{margin:5px 0}
 details{border:1px solid var(--line);background:var(--white);padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);margin:8px 0 0}
 .note{background:#fff5e9;border-left:4px solid #e2a33a;padding:12px 14px;font-size:13px;margin:24px 0}
 .glance{background:var(--white);border:1px solid var(--line);padding:14px 16px;margin:18px 0}.glance h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.glance ul{margin:0;padding-left:18px}.glance li{margin:3px 0;font-size:14px}
-footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}</style>
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}
+#short-answer dl{display:grid;grid-template-columns:135px 1fr;gap:6px 12px;margin:10px 0;font-size:13px}
+#short-answer dt{color:var(--muted);font-weight:600}
+#short-answer dd{margin:0}
+#short-answer p{margin:6px 0}
+@media(max-width:680px){#short-answer dl{grid-template-columns:1fr;gap:2px}}
+
+</style>
 </head>
 <body>
 <div class="bar">18+ · Companion product review · No explicit imagery</div>
@@ -66,6 +73,19 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
     </div>
   </div>
 
+  <section class="glance" id="short-answer" aria-labelledby="short-answer-title">
+    <h3 id="short-answer-title">Short answer</h3>
+    <p><strong>Liana 1:1 Torso</strong>: A 1:1 life-size silicone companion with a tear-resistant surface and a complete care kit included in the box. FORM INDEX scores it <strong>8.6/10</strong> and recorded a price of <strong>$499.89</strong> at Quzio, last verified 2026-11-25.</p>
+    <dl>
+      <dt>Product</dt><dd>Liana 1:1 Torso (Silicone companion · Quzio)</dd>
+      <dt>Price (USD)</dt><dd>$499.89 (previously $649.86)</dd>
+      <dt>Editor score</dt><dd>8.6/10 · editorial estimate, not a lab test</dd>
+      <dt>Best for</dt><dd>Buyers who want a full-size silicone companion with realistic weight and a complete starter kit.</dd>
+      <dt>Evidence</dt><dd>Retailer product specifications · <a href="https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l" rel="sponsored noopener" target="_blank">primary source</a></dd>
+      <dt>Last verified</dt><dd><time datetime="2026-11-25">2026-11-25</time></dd>
+    </dl>
+    <p class="sub">FORM INDEX is an independent review publisher, not a retailer: it does not sell, ship or accept returns for this product. Purchases are completed on Quzio's website. <a href="https://lllaf.com/methodology.html">How we score</a> · <a href="https://lllaf.com/report.html">Report a correction</a> · <a href="https://lllaf.com/llms.txt">Cite this site</a>.</p>
+  </section>
   <div class="glance"><h3>At a glance</h3><ul><li><strong>Material:</strong> Tear-resistant, corrosion-proof silicone</li><li><strong>Weight:</strong> 28.7 lb (13 kg)</li><li><strong>Scale:</strong> 1:1 life-size</li><li><strong>Channels:</strong> Textured channel design</li></ul></div>
 
   <h2>Specifications</h2>
@@ -88,21 +108,68 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@id": "https://lllaf.com/review-liana-torso.html#product",
   "@type": "Product",
   "name": "Liana 1:1 Torso",
   "description": "A 1:1 life-size silicone companion with a tear-resistant surface and a complete care kit included in the box.",
   "image": "https://cdn.shopify.com/s/files/1/0820/8557/6727/files/A9e1d6036c6e54fa1879ecdcc3e401888b.webp",
-  "brand": { "@type": "Brand", "name": "Quzio" },
-  "offers": { "@type": "Offer", "url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l", "priceCurrency": "USD", "price": "499.89", "availability": "https://schema.org/InStock" },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": 5, "reviewCount": 24 },
+  "brand": {
+    "@type": "Brand",
+    "name": "Quzio"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l",
+    "priceCurrency": "USD",
+    "price": "499.89",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 24
+  },
   "review": {
     "@type": "Review",
+    "@id": "https://lllaf.com/review-liana-torso.html#review",
     "name": "Liana 1:1 Torso Review: Specs, Scores & Verdict (2026)",
     "reviewBody": "The Liana is a 1:1 life-size silicone companion with a tear-resistant, corrosion-proof surface and a textured channel design. The standout is value: it ships with a full accessory care kit (rinser, UV wand, absorbent sticks and more), so the essentials are covered from day one. At about 28.7 lb it has realistic weight but needs a stable surface for use and drying, and it takes a little more effort to move than compact models. If you want a full-size silicone companion and care about texture, it is the strongest all-round pick of the three.",
     "datePublished": "2026-11-23",
     "dateModified": "2026-11-25",
-    "reviewRating": { "@type": "Rating", "ratingValue": 8.6, "bestRating": "10" },
-    "author": { "@type": "Organization", "name": "FORM INDEX", "url": "https://lllaf.com" }
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 8.6,
+      "bestRating": "10"
+    },
+    "author": {
+      "@id": "https://lllaf.com/#organization"
+    },
+    "itemReviewed": {
+      "@id": "https://lllaf.com/review-liana-torso.html#product"
+    },
+    "url": "https://lllaf.com/review-liana-torso.html",
+    "inLanguage": "en",
+    "isBasedOn": {
+      "@type": "CreativeWork",
+      "url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l",
+      "name": "Retailer product page"
+    },
+    "publisher": {
+      "@id": "https://lllaf.com/#organization"
+    }
+  },
+  "mainEntityOfPage": {
+    "@id": "https://lllaf.com/review-liana-torso.html#webpage"
+  },
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Retailer product page for Liana 1:1 Torso",
+    "url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l"
+  },
+  "subjectOf": {
+    "@id": "https://lllaf.com/review-liana-torso.html#review"
   }
 }
 </script>
@@ -111,8 +178,18 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Database", "item": "https://lllaf.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Liana 1:1 Torso", "item": "https://lllaf.com/review-liana-torso.html" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Database",
+      "item": "https://lllaf.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Liana 1:1 Torso",
+      "item": "https://lllaf.com/review-liana-torso.html"
+    }
   ]
 }
 </script>
@@ -120,7 +197,77 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{ "@type": "Question", "name": "What is included with the Liana?", "acceptedAnswer": { "@type": "Answer", "text": "The torso plus a free accessory care kit: automatic rinser, UV sterilization wand, absorbent sticks, suction tube, charging cable and manual." } },{ "@type": "Question", "name": "How much does the Liana weigh?", "acceptedAnswer": { "@type": "Answer", "text": "About 28.7 lb (13 kg)." } },{ "@type": "Question", "name": "Is it easy to clean?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The silicone surface is non-porous and quick to rinse, though the size means drying takes a little longer." } }]
+  "@id": "https://lllaf.com/review-liana-torso.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is included with the Liana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The torso plus a free accessory care kit: automatic rinser, UV sterilization wand, absorbent sticks, suction tube, charging cable and manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does the Liana weigh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 28.7 lb (13 kg)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it easy to clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The silicone surface is non-porous and quick to rinse, though the size means drying takes a little longer."
+      }
+    }
+  ],
+  "inLanguage": "en",
+  "about": {
+    "@id": "https://lllaf.com/review-liana-torso.html#product"
+  },
+  "isPartOf": {
+    "@id": "https://lllaf.com/review-liana-torso.html#webpage"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://lllaf.com/review-liana-torso.html#webpage",
+  "url": "https://lllaf.com/review-liana-torso.html",
+  "name": "Liana 1:1 Torso Review — FORM INDEX",
+  "description": "Independent FORM INDEX review of the Liana 1:1 Torso sold by Quzio, with recorded price, editor score, specifications and care guidance.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://lllaf.com/#website"
+  },
+  "about": {
+    "@id": "https://lllaf.com/review-liana-torso.html#product"
+  },
+  "mainEntity": {
+    "@id": "https://lllaf.com/review-liana-torso.html#product"
+  },
+  "publisher": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "reviewedBy": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-25",
+  "lastReviewed": "2026-11-25",
+  "isAccessibleForFree": true,
+  "citation": {
+    "@type": "CreativeWork",
+    "url": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l",
+    "name": "Retailer product page (primary source)"
+  },
+  "significantLink": "https://quziostore.com/products/free-gift-included-liana-medical-grade-silicone-1-1-life-size-torso-masturbator-tear-resistant-corrosion-proof-skin-l"
 }
 </script>
 </body>

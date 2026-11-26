@@ -44,7 +44,14 @@ ul,ol{margin:10px 0;padding-left:20px}li{margin:5px 0}
 details{border:1px solid var(--line);background:var(--white);padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);margin:8px 0 0}
 .note{background:#fff5e9;border-left:4px solid #e2a33a;padding:12px 14px;font-size:13px;margin:24px 0}
 .glance{background:var(--white);border:1px solid var(--line);padding:14px 16px;margin:18px 0}.glance h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.glance ul{margin:0;padding-left:18px}.glance li{margin:3px 0;font-size:14px}
-footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}</style>
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:18px}
+#short-answer dl{display:grid;grid-template-columns:135px 1fr;gap:6px 12px;margin:10px 0;font-size:13px}
+#short-answer dt{color:var(--muted);font-weight:600}
+#short-answer dd{margin:0}
+#short-answer p{margin:6px 0}
+@media(max-width:680px){#short-answer dl{grid-template-columns:1fr;gap:2px}}
+
+</style>
 </head>
 <body>
 <div class="bar">18+ · Companion product review · No explicit imagery</div>
@@ -66,6 +73,19 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
     </div>
   </div>
 
+  <section class="glance" id="short-answer" aria-labelledby="short-answer-title">
+    <h3 id="short-answer-title">Short answer</h3>
+    <p><strong>Lea 31.96 lb Torso</strong>: A credible middle-weight 1:1-scale torso with useful published weight, but the product page's $0.00 price makes checkout verification essential. FORM INDEX scores it <strong>7.6/10</strong>. The live price could not be verified, so no price is asserted here.</p>
+    <dl>
+      <dt>Product</dt><dd>Lea 31.96 lb Torso (TPE companion torso · QORMOS)</dd>
+      <dt>Price (USD)</dt><dd>Not verified — Homepage displayed $429.99; the product page rendered $0.00 at review time. Confirm the live variant price before ordering.</dd>
+      <dt>Editor score</dt><dd>7.6/10 · editorial estimate, not a lab test</dd>
+      <dt>Best for</dt><dd>Buyers who want substantial torso weight but still need a manageable single-item care routine.</dd>
+      <dt>Evidence</dt><dd>Retailer product specifications · <a href="https://qormos.com/products/qormos-lea-1-1-life-size-private-chef-31-96lbs-14-5kg-wide-hips-rounded-buttocks-2-channels-sex-doll-torso" rel="sponsored noopener" target="_blank">primary source</a></dd>
+      <dt>Last verified</dt><dd><time datetime="2026-11-25">2026-11-25</time></dd>
+    </dl>
+    <p class="sub">FORM INDEX is an independent review publisher, not a retailer: it does not sell, ship or accept returns for this product. Purchases are completed on QORMOS's website. <a href="https://lllaf.com/methodology.html">How we score</a> · <a href="https://lllaf.com/report.html">Report a correction</a> · <a href="https://lllaf.com/llms.txt">Cite this site</a>.</p>
+  </section>
   <div class="glance"><h3>At a glance</h3><ul><li><strong>Published weight:</strong> 31.96 lb / 14.5 kg</li><li><strong>Scale claim:</strong> 1:1 life-size torso</li><li><strong>Material:</strong> QORMOS describes it as Medical-Grade Bio-Sensation TPE</li><li><strong>Channels:</strong> Two channels; the feature list calls them smooth rather than textured</li></ul></div>
 
   <h2>Specifications</h2>
@@ -88,21 +108,56 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@id": "https://lllaf.com/review-qormos-lea.html#product",
   "@type": "Product",
   "name": "Lea 31.96 lb Torso",
   "description": "A credible middle-weight 1:1-scale torso with useful published weight, but the product page's $0.00 price makes checkout verification essential.",
   "image": "https://lllaf.com/qormos-product.svg",
-  "brand": { "@type": "Brand", "name": "QORMOS" },
-  
-  
+  "brand": {
+    "@type": "Brand",
+    "name": "QORMOS"
+  },
   "review": {
     "@type": "Review",
+    "@id": "https://lllaf.com/review-qormos-lea.html#review",
     "name": "Lea 31.96 lb Torso Review: Specs, Scores & Verdict (2026)",
     "reviewBody": "Lea is the product we would shortlist for someone who finds a 12 lb torso too light but does not want to manage the 70.4 lb Pink Paradise. The published 31.96 lb / 14.5 kg weight gives it enough mass to stay supported during use while remaining in a different handling class from the largest model. The 1:1-scale claim needs interpretation: Lea is a torso, not a complete body with a head and full limbs. Its value is concentrated in the torso proportions, width and rounded shape. QORMOS publishes the weight, but not a complete dimension set or a shipping-box size, so measure a storage and drying area before ordering. The biggest problem is transactional rather than physical. QORMOS's homepage advertised Lea at $429.99, but the product page rendered $0.00 at the time of this check. We would not place the product record at a confirmed price until the live variant price is visible and consistent. That is enough to lower the confidence score even though the product concept is sensible.",
     "datePublished": "2026-11-25",
     "dateModified": "2026-11-25",
-    "reviewRating": { "@type": "Rating", "ratingValue": 7.6, "bestRating": "10" },
-    "author": { "@type": "Organization", "name": "FORM INDEX", "url": "https://lllaf.com" }
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 7.6,
+      "bestRating": "10"
+    },
+    "author": {
+      "@id": "https://lllaf.com/#organization"
+    },
+    "itemReviewed": {
+      "@id": "https://lllaf.com/review-qormos-lea.html#product"
+    },
+    "url": "https://lllaf.com/review-qormos-lea.html",
+    "inLanguage": "en",
+    "isBasedOn": {
+      "@type": "CreativeWork",
+      "url": "https://qormos.com/products/qormos-lea-1-1-life-size-private-chef-31-96lbs-14-5kg-wide-hips-rounded-buttocks-2-channels-sex-doll-torso",
+      "name": "Retailer product page"
+    },
+    "publisher": {
+      "@id": "https://lllaf.com/#organization"
+    }
+  },
+  "mainEntityOfPage": {
+    "@id": "https://lllaf.com/review-qormos-lea.html#webpage"
+  },
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Retailer product page for Lea 31.96 lb Torso",
+    "url": "https://qormos.com/products/qormos-lea-1-1-life-size-private-chef-31-96lbs-14-5kg-wide-hips-rounded-buttocks-2-channels-sex-doll-torso"
+  },
+  "subjectOf": {
+    "@id": "https://lllaf.com/review-qormos-lea.html#review"
   }
 }
 </script>
@@ -111,8 +166,18 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Database", "item": "https://lllaf.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Lea 31.96 lb Torso", "item": "https://lllaf.com/review-qormos-lea.html" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Database",
+      "item": "https://lllaf.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lea 31.96 lb Torso",
+      "item": "https://lllaf.com/review-qormos-lea.html"
+    }
   ]
 }
 </script>
@@ -120,7 +185,85 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{ "@type": "Question", "name": "How heavy is the QORMOS Lea?", "acceptedAnswer": { "@type": "Answer", "text": "The public listing says 31.96 lb / 14.5 kg." } },{ "@type": "Question", "name": "Why does the review show a price warning?", "acceptedAnswer": { "@type": "Answer", "text": "QORMOS displayed $429.99 on its homepage but $0.00 on the product page during the November 25, 2026 review check." } },{ "@type": "Question", "name": "Is Lea a full-size doll?", "acceptedAnswer": { "@type": "Answer", "text": "The listing calls it a 1:1 life-size torso. It is not presented as a complete head-and-limb doll." } },{ "@type": "Question", "name": "What material does QORMOS list for Lea?", "acceptedAnswer": { "@type": "Answer", "text": "The listing says Medical-Grade Bio-Sensation TPE. FORM INDEX has not independently verified that designation." } }]
+  "@id": "https://lllaf.com/review-qormos-lea.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How heavy is the QORMOS Lea?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The public listing says 31.96 lb / 14.5 kg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the review show a price warning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QORMOS displayed $429.99 on its homepage but $0.00 on the product page during the November 25, 2026 review check."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Lea a full-size doll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The listing calls it a 1:1 life-size torso. It is not presented as a complete head-and-limb doll."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What material does QORMOS list for Lea?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The listing says Medical-Grade Bio-Sensation TPE. FORM INDEX has not independently verified that designation."
+      }
+    }
+  ],
+  "inLanguage": "en",
+  "about": {
+    "@id": "https://lllaf.com/review-qormos-lea.html#product"
+  },
+  "isPartOf": {
+    "@id": "https://lllaf.com/review-qormos-lea.html#webpage"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://lllaf.com/review-qormos-lea.html#webpage",
+  "url": "https://lllaf.com/review-qormos-lea.html",
+  "name": "Lea 31.96 lb Torso Review — FORM INDEX",
+  "description": "Independent FORM INDEX review of the Lea 31.96 lb Torso sold by QORMOS, with recorded price, editor score, specifications and care guidance.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://lllaf.com/#website"
+  },
+  "about": {
+    "@id": "https://lllaf.com/review-qormos-lea.html#product"
+  },
+  "mainEntity": {
+    "@id": "https://lllaf.com/review-qormos-lea.html#product"
+  },
+  "publisher": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "reviewedBy": {
+    "@id": "https://lllaf.com/#organization"
+  },
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "lastReviewed": "2026-11-25",
+  "isAccessibleForFree": true,
+  "citation": {
+    "@type": "CreativeWork",
+    "url": "https://qormos.com/products/qormos-lea-1-1-life-size-private-chef-31-96lbs-14-5kg-wide-hips-rounded-buttocks-2-channels-sex-doll-torso",
+    "name": "Retailer product page (primary source)"
+  },
+  "significantLink": "https://qormos.com/products/qormos-lea-1-1-life-size-private-chef-31-96lbs-14-5kg-wide-hips-rounded-buttocks-2-channels-sex-doll-torso"
 }
 </script>
 </body>
